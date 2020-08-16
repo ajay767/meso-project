@@ -1,5 +1,20 @@
 const user = require('./../models/userModel');
 
+exports.postNewUser = async (req, res) => {
+  try {
+    const newUser = await user.create(req.body);
+    res.status(200).json({
+      status: 'Success',
+      data: newUser
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: 'failed',
+      message: error
+    });
+  }
+};
+
 exports.getAllUsers = async (req, res) => {
   try {
     const allUser = await user.find();
@@ -65,21 +80,6 @@ exports.deleteAllUser = async (req, res) => {
     await user.deleteMany({});
     res.status(204).json({
       status: 'success'
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
-  }
-};
-
-exports.postNewUser = async (req, res) => {
-  try {
-    const newUser = await user.create(req.body);
-    res.status(200).json({
-      status: 'Success',
-      data: newUser
     });
   } catch (error) {
     res.status(400).json({
