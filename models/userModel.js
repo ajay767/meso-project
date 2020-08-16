@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -16,14 +17,30 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, 'Please enter your email']
+  },
+  password: {
+    type: String,
+    required: [true, 'Please enter your password']
   }
 });
 
 userSchema.pre('save', function(next) {
-  this.name = this.gender === 'male' ? `Mr.${this.name}` : `Mrs.${this.name}`;
+  if (this.gender === 'male') this.name = `Mr.${this.name}`;
+  else if (this.gender === 'female') {
+    this.name = `Mrs.${this.name}`;
+  }
   next();
 });
 
-const user = mongoose.model('user', userSchema);
+userSchema.pre('save', async function(next) {
+  try {
+    this.password = await bcrypt.hash(this.password, 8);
+  } catch (error) {
+    throw new Error('Error occured');
+  }
+  next();
+});
+
+const user = mongoose.model('User', userSchema);
 
 module.exports = user;
