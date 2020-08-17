@@ -44,7 +44,7 @@ exports.getUserByID = async (req, res) => {
     });
   }
 };
-
+//
 exports.updateUser = async (req, res) => {
   try {
     const updatedUser = await user.update(req.body);
