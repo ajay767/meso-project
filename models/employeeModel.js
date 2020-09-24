@@ -6,18 +6,51 @@ const employeeSchema = mongoose.Schema({
     type: String,
     required: [true, 'A user must specify there name']
   },
-  degree: {
+  Academia_Specification: {
     type: String,
-    required: [true, 'Please specify your educational Degree ']
+    required: [true, 'Please specify your educational Academia Specification  ']
   },
-  gender: {
+  Specialist: {
     type: String,
-    required: [true, 'A user must specify there name']
+    required: [true, 'A user must specify there specialization']
   },
-  email: {
+  Registration_Number: {
     type: String,
-    required: [true, 'Please enter your email']
+    required: [true, 'Please enter your registration number']
   },
+  Registration_Council: {
+    type: String,
+    required: [true, 'Please enter your registration council']
+  },
+  Registration_Year: {
+    type: String,
+    required: [true, 'Please enter your registration year']
+  },
+  Doctor_Indentify_Proof: {
+    type: String,
+    required: [true, 'Please enter your Doctor Indentify proof']
+  },
+  Registration_Proof: {
+    type: String,
+    required: [true, 'Please enter your REGISTRATION PROOF ']
+  },
+  Establishment_Ownership_Proof: {
+    type: String,
+    required: [true, 'Please enter your ESTABLISHMENT OWNERSHIP PROOF ']
+  },
+  Location: {
+    type: String,
+    required: [true, 'Please enter your location']
+  },
+  Time_slot: {
+    type: String,
+    required: [true, 'Please enter your time-slot']
+  },
+  Fees: {
+    type: Number,
+    required: [true, 'Please enter your time-slot']
+  },
+
   password: {
     type: String,
     required: [true, 'Please enter your password']
