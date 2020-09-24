@@ -1,90 +1,86 @@
-const user = require('./../models/userModel');
+const User = require('./../models/userModel');
+const catchAsync = require('./../utils/catchAsync');
+const AppError = require('./../utils/appError');
 
-exports.postNewUser = async (req, res) => {
-  try {
-    const newUser = await user.create(req.body);
-    res.status(200).json({
-      status: 'Success',
-      data: newUser
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
-  }
+const filterObj = (obj, ...allowedFields) => {
+  const newObj = {};
+  Object.keys(obj).forEach(el => {
+    if (allowedFields.includes(el)) newObj[el] = obj[el];
+  });
+  return newObj;
 };
 
-exports.getAllUsers = async (req, res) => {
-  try {
-    const allUser = await user.find();
-    res.status(200).json({
-      status: 'success',
-      message: allUser
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
-  }
-};
+exports.getAllUsers = catchAsync(async (req, res, next) => {
+  const users = await User.find();
 
-exports.getUserByID = async (req, res) => {
-  try {
-    const myuser = await user.find({ _id: req.params.id });
-    res.status(200).json({
-      status: 'success',
-      message: myuser
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
-  }
-};
-//
-exports.updateUser = async (req, res) => {
-  try {
-    const updatedUser = await user.update(req.body);
-    res.status(201).json({
-      status: 'successfully updated',
-      message: updatedUser
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
-  }
-};
+  // SEND RESPONSE
+  res.status(200).json({
+    status: 'success',
+    results: users.length,
+    data: {
+      users
+    }
+  });
+});
 
-exports.deleteUser = async (req, res) => {
-  try {
-    await user.findByIdAndDelete(req.params.id);
-    res.status(204).json({
-      status: 'Deleted user',
-      message: null
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
+exports.updateMe = catchAsync(async (req, res, next) => {
+  // 1) Create error if user POSTs password data
+  if (req.body.password || req.body.passwordConfirm) {
+    return next(
+      new AppError(
+        'This route is not for password updates. Please use /updateMyPassword.',
+        400
+      )
+    );
   }
-};
 
-exports.deleteAllUser = async (req, res) => {
-  try {
-    await user.deleteMany({});
-    res.status(204).json({
-      status: 'success'
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: 'failed',
-      message: error
-    });
-  }
+  // 2) Filtered out unwanted fields names that are not allowed to be updated
+  const filteredBody = filterObj(req.body, 'name', 'email');
+
+  // 3) Update user document
+  const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+    new: true,
+    runValidators: true
+  });
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      user: updatedUser
+    }
+  });
+});
+
+exports.deleteMe = catchAsync(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.user.id, { active: false });
+
+  res.status(204).json({
+    status: 'success',
+    data: null
+  });
+});
+
+exports.getUser = (req, res) => {
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });
+};
+exports.createUser = (req, res) => {
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });
+};
+exports.updateUser = (req, res) => {
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });
+};
+exports.deleteUser = (req, res) => {
+  res.status(500).json({
+    status: 'error',
+    message: 'This route is not yet defined!'
+  });
 };
