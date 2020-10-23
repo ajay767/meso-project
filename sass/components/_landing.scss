@@ -1,0 +1,80 @@
+.landing {
+    position: relative;
+    padding: $padding-m;
+    margin-bottom: 4rem;
+    height: 40rem;
+    width: 100%;
+
+    & img {
+        z-index: -5;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        border-radius: 3px;
+    }
+
+    &--nxt-btn {
+        position: absolute;
+        top: 30%;
+        right: 3rem;
+        cursor: pointer;
+
+        svg {
+            width: 5rem;
+
+            use {
+                fill: #fff;
+            }
+        }
+    }
+
+    &--prev-btn {
+        position: absolute;
+        top: 30%;
+        left: 3rem;
+        cursor: pointer;
+
+        svg {
+            transform: rotate(180deg);
+            width: 5rem;
+
+            use {
+                fill: #fff;
+            }
+        }
+    }
+
+    h1 {
+
+        width: 31rem;
+        position: absolute;
+        top: 35%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: $color-light;
+        font-size: 3rem;
+
+        transform: skew(0, -9deg);
+        padding: 0 3rem;
+    }
+
+    p {
+        position: absolute;
+        top: 48%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 47rem;
+        background-color: $color-light;
+        font-size: 2.5rem;
+
+        transform: skew(0, -9deg);
+        padding: 0 3rem;
+    }
+}

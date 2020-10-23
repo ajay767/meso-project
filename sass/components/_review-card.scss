@@ -1,0 +1,41 @@
+.reviews {
+
+
+    .review__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+
+
+        &--content {
+            width: 50rem;
+            font-size: 5rem;
+            line-height: 2rem;
+            color: $color-gray-light;
+            text-align: center;
+            margin: 1rem 0;
+
+            & span {
+                font-size: 2rem;
+                color: $color-gray;
+
+            }
+        }
+
+        &--author-image {
+            width: 8rem;
+            border-radius: 50%;
+            margin: 1rem 0;
+
+        }
+
+        &--author-name {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "abstracts/variable.scss";
+@import "abstracts/mixins.scss";
+
+@import "layout/_footer.scss";
+@import "layout/_header.scss";
+
+@import "components/landing.scss";
+@import "components/slider";
+@import "components/app_sponser_section";
+@import "components/sidebar";
+@import "components/features";
+@import "components/review-card";
+
+@import "typography/typography";
+@import "base/base.scss";
+
+@import "pages/home";

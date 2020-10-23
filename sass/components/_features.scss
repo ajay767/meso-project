@@ -1,0 +1,44 @@
+.features {
+    width: 72%;
+    margin: 4rem auto 15rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+
+    .feature__card {
+        width: auto;
+
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 2.5rem;
+
+        &--icon {
+            grid-column: 1/2;
+            grid-row: 1/ span 2;
+            transform: translateY(-1rem);
+            margin-right: 2rem;
+
+            & svg {
+                height: 4.5rem;
+                width: 4.5rem;
+                fill: $color-green-light
+            }
+        }
+
+        &--title {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            font-size: 1.9rem;
+        }
+
+        &--description {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            font-size: 1.7rem;
+            color: $color-gray;
+        }
+    }
+
+}
