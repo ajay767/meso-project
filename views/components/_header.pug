@@ -19,9 +19,18 @@ header.navigation
         a(href="#").navigation__searchbar--input-link
             img(src="src/img/search.svg", alt="search icon").navigation__searchbar--input-link-btn
     .navigation__link
-        p.navigation__link--user-name Welcome Ajay!
-        img(src="src/img/user.svg", alt="Ajay yadav").navigation__link--user-profile
-        .navigation__link--item
-            span
-            span
-            span
+
+        svg.navigation__link--user-profile.navigation__link--user-icon
+            use(xlink:href="src/img/icon-pack-2.svg#user")
+
+        svg.navigation__link--user-notification.navigation__link--user-icon
+            use(xlink:href="src/img/icon-pack-2.svg#notification")
+
+        svg.navigation__link--item.navigation__link--user-icon
+            use(xlink:href="src/img/icon-pack-2.svg#menu-3")
+        
+        
+        //- .navigation__link--item
+        //-     span
+        //-     span
+        //-     span

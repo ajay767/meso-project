@@ -7,6 +7,10 @@
         letter-spacing: 3px;
         width: 100%;
         text-align: center;
+
+        @media (max-width: 980px) {
+            font-size: 2.5rem;
+        }
     }
 
     &__description {
@@ -16,5 +20,9 @@
         letter-spacing: 3px;
         width: 100%;
         text-align: center;
+
+        @media (max-width: 980px) {
+            font-size: 1.3rem;
+        }
     }
 }

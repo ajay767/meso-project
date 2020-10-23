@@ -17,14 +17,21 @@ footer {
   left: 0;
   width: 100%;
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  height: 5rem;
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.8); }
+  @media (max-width: 980px) {
+    .navigation {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr); } }
   .navigation__logo {
     color: #fff;
     font-size: 1.8rem; }
+    @media (max-width: 980px) {
+      .navigation__logo {
+        grid-row: 1/2;
+        grid-column: 1/2; } }
   .navigation__searchbar {
     height: 4rem;
     width: 56rem;
@@ -46,9 +53,20 @@ footer {
         display: block;
         margin: 0.7rem;
         width: 2.5rem; }
+    @media (max-width: 980px) {
+      .navigation__searchbar {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        width: 100%;
+        margin: 1rem auto 0; } }
   .navigation__link {
+    justify-self: right;
     display: flex;
     align-items: center; }
+    @media (max-width: 980px) {
+      .navigation__link {
+        grid-row: 1/2;
+        grid-column: 2/3; } }
     .navigation__link--btn {
       text-decoration: none;
       font-size: 1.6rem;
@@ -62,23 +80,14 @@ footer {
         background-color: #fff;
         color: #444343; }
     .navigation__link--user-profile {
+      margin: 0 1.5rem; }
+    .navigation__link--user-icon {
       margin: 0 1.5rem;
-      width: 3.5rem; }
-    .navigation__link--user-name {
-      font-weight: 600;
-      font-size: 1.7rem;
-      color: #fff; }
+      fill: #fff;
+      width: 3rem;
+      height: 3rem; }
     .navigation__link--item {
-      display: flex;
-      flex-direction: column;
-      padding: 0 1rem;
       cursor: pointer; }
-      .navigation__link--item span {
-        height: .4rem;
-        width: .4rem;
-        border-radius: 50%;
-        background-color: #fff;
-        margin: .2rem; }
 
 .landing {
   position: relative;
@@ -86,6 +95,10 @@ footer {
   margin-bottom: 4rem;
   height: 40rem;
   width: 100%; }
+  @media (max-width: 980px) {
+    .landing {
+      height: 30rem;
+      padding: 1.5rem 0; } }
   .landing img {
     z-index: -5;
     height: 100%;
@@ -93,25 +106,44 @@ footer {
     object-fit: cover;
     object-position: bottom;
     border-radius: 3px; }
+    @media (max-width: 980px) {
+      .landing img {
+        border-radius: 0; } }
   .landing--nxt-btn {
     position: absolute;
     top: 30%;
     right: 3rem;
     cursor: pointer; }
+    @media (max-width: 980px) {
+      .landing--nxt-btn {
+        top: 45%; } }
     .landing--nxt-btn svg {
-      width: 5rem; }
+      width: 5rem;
+      height: 5rem; }
       .landing--nxt-btn svg use {
         fill: #fff; }
+      @media (max-width: 980px) {
+        .landing--nxt-btn svg {
+          width: 3rem;
+          height: 3rem; } }
   .landing--prev-btn {
     position: absolute;
     top: 30%;
     left: 3rem;
     cursor: pointer; }
+    @media (max-width: 980px) {
+      .landing--prev-btn {
+        top: 45%; } }
     .landing--prev-btn svg {
       transform: rotate(180deg);
-      width: 5rem; }
+      width: 5rem;
+      height: 5rem; }
       .landing--prev-btn svg use {
         fill: #fff; }
+      @media (max-width: 980px) {
+        .landing--prev-btn svg {
+          width: 3rem;
+          height: 3rem; } }
   .landing h1 {
     width: 31rem;
     position: absolute;
@@ -125,6 +157,9 @@ footer {
     font-size: 3rem;
     transform: skew(0, -9deg);
     padding: 0 3rem; }
+    @media (max-width: 980px) {
+      .landing h1 {
+        font-size: 2.5rem; } }
   .landing p {
     position: absolute;
     top: 48%;
@@ -138,6 +173,10 @@ footer {
     font-size: 2.5rem;
     transform: skew(0, -9deg);
     padding: 0 3rem; }
+    @media (max-width: 980px) {
+      .landing p {
+        font-size: 2rem;
+        width: 39rem; } }
 
 .slider {
   max-width: 100rem;
@@ -145,6 +184,9 @@ footer {
   margin: 0 auto;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 980px) {
+    .slider {
+      height: 36rem; } }
   .slider__btn {
     position: absolute;
     top: 50%;
@@ -177,6 +219,9 @@ footer {
   justify-content: center;
   flex-direction: column;
   transition: transform 1s; }
+  @media (max-width: 980px) {
+    .slide {
+      height: 36rem; } }
 
 .dots {
   position: absolute;
@@ -209,57 +254,85 @@ footer {
   justify-content: space-around;
   align-items: center;
   position: relative;
-  height: 44rem;
+  padding: 2rem 0;
   overflow: hidden;
   margin: 9rem 0; }
+  @media (max-width: 980px) {
+    .self-sponser {
+      flex-direction: column; } }
   .self-sponser--card {
-    padding: 1rem;
-    background-color: #fff;
-    margin: 3rem;
-    border-radius: 3px;
-    border: 1px solid #a7a6a6;
-    width: 37rem;
-    height: 17rem;
-    display: grid;
-    grid-gap: 2px;
-    grid-template-columns: 8rem 1fr;
-    grid-template-rows: 1fr .5fr 1fr; }
-    .self-sponser--card img {
-      width: 5rem;
-      align-items: center;
-      grid-row: 1/3;
-      justify-self: center; }
-    .self-sponser--card--head {
-      font-size: 2rem;
-      grid-row: 1/2;
-      grid-column: 2/4; }
-    .self-sponser--card--tag {
-      color: #0b8d0b;
-      font-size: 1.4rem;
-      grid-row: 2/3;
-      grid-column: 2/4; }
-    .self-sponser--card--link-btn {
+    position: relative; }
+    @media (max-width: 980px) {
+      .self-sponser--card {
+        width: 100%;
+        height: 30rem;
+        overflow: hidden; } }
+    .self-sponser--card-container {
+      position: relative;
       padding: 1rem;
-      background-color: #0b8d0b;
-      color: #fff;
-      border-radius: 2px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.6rem;
-      grid-column: 1/ span 2;
-      height: 4rem; }
-
-.sponser-bg {
-  height: 94rem;
-  position: absolute;
-  left: 13rem;
-  top: 0;
-  z-index: -10; }
+      background-color: #fff;
+      margin: 3rem;
+      border-radius: 3px;
+      border: 1px solid #a7a6a6;
+      width: 37rem;
+      height: 17rem;
+      display: grid;
+      grid-gap: 2px;
+      grid-template-columns: 8rem 1fr;
+      grid-template-rows: 1fr .5fr 1fr;
+      overflow: hidden; }
+      @media (max-width: 980px) {
+        .self-sponser--card-container {
+          margin: 10rem auto; } }
+      .self-sponser--card-container--playstore {
+        width: 5rem;
+        align-items: center;
+        grid-row: 1/3;
+        justify-self: center; }
+      .self-sponser--card-container--bg {
+        position: absolute;
+        left: -3.5rem;
+        top: -6rem;
+        z-index: -10;
+        width: 50rem; }
+        @media (max-width: 980px) {
+          .self-sponser--card-container--bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -0.5rem;
+            z-index: -10;
+            width: 50rem;
+            margin-right: auto;
+            margin-left: auto;
+            display: block; } }
+      .self-sponser--card-container--head {
+        font-size: 2rem;
+        grid-row: 1/2;
+        grid-column: 2/4; }
+      .self-sponser--card-container--tag {
+        color: #0b8d0b;
+        font-size: 1.4rem;
+        grid-row: 2/3;
+        grid-column: 2/4; }
+      .self-sponser--card-container--link-btn {
+        padding: 1rem;
+        background-color: #0b8d0b;
+        color: #fff;
+        border-radius: 2px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.6rem;
+        grid-column: 1/ span 2;
+        height: 4rem; }
 
 .sponser__content {
   text-align: center;
   letter-spacing: 3px;
   width: 43%; }
+  @media (max-width: 980px) {
+    .sponser__content {
+      width: 95%; } }
   .sponser__content h1 {
     font-size: 2rem; }
   .sponser__content p {
@@ -286,25 +359,78 @@ footer {
   height: calc(100vh - 7rem);
   width: 0;
   position: fixed;
-  z-index: 1;
-  top: 5rem;
+  z-index: 15;
+  height: 100%;
+  top: 0rem;
   right: 0rem;
-  background-color: orange;
+  background-color: #f3f3f3;
   pointer-events: none;
   overFlow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px; }
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    width: 24rem;
-    margin: 1rem 0;
-    display: block;
-    text-decoration: none;
-    font-size: 1.8rem;
-    transition: 0.3s; }
+  -webkit-box-shadow: -4px 0px 18px 0px #b8b8b8;
+  -moz-box-shadow: -4px 0px 18px 0px #b8b8b8;
+  box-shadow: -4px 0px 18px 0px #676767; }
+  .sidebar__btn {
+    height: 6rem;
+    position: relative;
+    background-color: #00213a; }
+    .sidebar__btn span {
+      line-height: 2.8rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 1rem;
+      width: 20rem;
+      height: 3rem;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 1.9rem;
+      color: #ffffff; }
+    .sidebar__btn svg {
+      padding: .5rem;
+      border-radius: 50%;
+      background: #ffc671;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto; }
+  .sidebar__list {
+    padding: 1rem; }
+    .sidebar__list--item {
+      color: #108eea;
+      padding: 8px 8px 8px 11px;
+      width: 26rem;
+      margin: 1rem 0;
+      display: block;
+      text-decoration: none;
+      font-size: 1.8rem;
+      transition: 0.3s;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .sidebar__list--item-icon {
+        background: #d3d2d2;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+        width: 4.5rem;
+        height: 4.5rem; }
+  .sidebar__about p {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    width: 8rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
 
 .sidebar.active {
-  padding: 1rem;
   pointer-events: all;
   width: 28rem; }
 
@@ -355,6 +481,9 @@ footer {
     .reviews .review__card--content span {
       font-size: 2rem;
       color: #444343; }
+      @media (max-width: 980px) {
+        .reviews .review__card--content span {
+          font-size: 1.5rem; } }
   .reviews .review__card--author-image {
     width: 8rem;
     border-radius: 50%;
@@ -371,6 +500,9 @@ footer {
   letter-spacing: 3px;
   width: 100%;
   text-align: center; }
+  @media (max-width: 980px) {
+    .primary__section__heading {
+      font-size: 2.5rem; } }
 
 .primary__section__description {
   margin: .5rem 0 2rem;
@@ -379,6 +511,9 @@ footer {
   letter-spacing: 3px;
   width: 100%;
   text-align: center; }
+  @media (max-width: 980px) {
+    .primary__section__description {
+      font-size: 1.3rem; } }
 
 html {
   font-size: 62.5%;
@@ -397,3 +532,6 @@ body {
 
 .main__container {
   padding: 0 1rem; }
+  @media (max-width: 980px) {
+    .main__container {
+      padding: 0; } }

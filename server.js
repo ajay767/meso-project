@@ -20,6 +20,6 @@ mongoose
   })
   .then(() => console.log('Database connected :)'));
 
-app.listen(process.env.PORT, (req, res) => {
-  console.log(`Server is up and running on port ${process.env.PORT}`);
+app.listen(process.env.PORT || 3000, (req, res) => {
+  console.log(`Server is up and running on port ${process.env.PORT || 3000}`);
 });

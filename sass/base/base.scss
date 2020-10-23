@@ -22,4 +22,7 @@ body {
 .main__container {
     padding: 0 $padding-sm;
 
+    @media (max-width: 980px) {
+        padding: 0;
+    }
 }

@@ -1,14 +1,14 @@
 function navbarToggle() {
-  const nav = document.querySelector('.navigation__link--item');
+  const navOpen = document.querySelector('.navigation__link--item');
+  const navClose = document.querySelector('.sidebar__btn--close-nav ');
   const sideBar = document.querySelector('.sidebar');
 
-  const navToggle = () => {
-    console.log('navbar btn clicked!');
-    sideBar.classList.toggle('active');
-  };
+  navOpen.addEventListener('click', e => {
+    sideBar.classList.add('active');
+  });
 
-  nav.addEventListener('click', e => {
-    navToggle();
+  navClose.addEventListener('click', e => {
+    sideBar.classList.remove('active');
   });
 }
 

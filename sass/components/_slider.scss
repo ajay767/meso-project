@@ -5,6 +5,10 @@
     position: relative;
     overflow: hidden;
 
+    @media (max-width: 980px) {
+        height: 36rem;
+    }
+
     &__btn {
         position: absolute;
         top: 50%;
@@ -44,6 +48,10 @@
     justify-content: center;
     flex-direction: column;
     transition: transform 1s;
+
+    @media (max-width: 980px) {
+        height: 36rem;
+    }
 }
 
 .dots {

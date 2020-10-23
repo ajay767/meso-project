@@ -2,28 +2,99 @@
     height: calc(100vh - 7rem);
     width: 0;
     position: fixed;
-    z-index: 1;
-    top: 5rem;
+    z-index: 15;
+    height: 100%;
+    top: 0rem;
     right: 0rem;
-    background-color: orange;
+    background-color: rgb(243, 243, 243);
     pointer-events: none;
     overFlow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    -webkit-box-shadow: -4px 0px 18px 0px rgba(184, 184, 184, 1);
+    -moz-box-shadow: -4px 0px 18px 0px rgba(184, 184, 184, 1);
+    box-shadow: -4px 0px 18px 0px #676767;
 
-    & a {
-        padding: 8px 8px 8px 32px;
-        width: 24rem;
-        margin: 1rem 0;
-        display: block;
-        text-decoration: none;
-        font-size: 1.8rem;
-        transition: 0.3s;
+
+    &__btn {
+        height: 6rem;
+        position: relative;
+        background-color: $color-primary-night;
+
+        & span {
+            line-height: 2.8rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 1rem;
+            width: 20rem;
+            height: 3rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 1.9rem;
+            color: #ffffff;
+        }
+
+        & svg {
+            padding: .5rem;
+            border-radius: 50%;
+            background: #ffc671;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 1rem;
+            width: 3rem;
+            height: 3rem;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
     }
+
+    &__list {
+        padding: $padding-sm;
+
+        &--item {
+            color: $color-primary;
+            padding: 8px 8px 8px 11px;
+            width: 26rem;
+            margin: 1rem 0;
+            display: block;
+            text-decoration: none;
+            font-size: 1.8rem;
+            transition: 0.3s;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            &-icon {
+                background: #d3d2d2;
+                padding: 1rem;
+                border-radius: 50%;
+                margin-right: 2rem;
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+
+        }
+    }
+
+    &__about {
+
+        & p {
+            position: absolute;
+            bottom: 1rem;
+            font-size: 1.5rem;
+            width: 8rem;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
 }
 
 .sidebar.active {
-    padding: $padding-sm;
     pointer-events: all;
     width: 28rem;
 }
