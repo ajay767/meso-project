@@ -11,6 +11,10 @@
 
     }
 
+    @include respond(phone) {
+        height: 22rem;
+    }
+
     & img {
         z-index: -5;
         height: 100%;
@@ -24,9 +28,23 @@
         }
     }
 
+    &--navigation-btn {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        use {
+            fill: #fff;
+        }
+
+        @media (max-width: 980px) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
     &--nxt-btn {
         position: absolute;
-        top: 30%;
+        top: 42%;
         right: 3rem;
         cursor: pointer;
 
@@ -34,44 +52,24 @@
             top: 45%;
         }
 
-        svg {
-            width: 5rem;
-            height: 5rem;
-
-            use {
-                fill: #fff;
-            }
-
-            @media (max-width: 980px) {
-                width: 3rem;
-                height: 3rem;
-            }
+        @include respond(phone) {
+            right: 1rem;
         }
     }
 
     &--prev-btn {
         position: absolute;
-        top: 30%;
+        top: 42%;
         left: 3rem;
+        transform: rotate(180deg);
         cursor: pointer;
 
         @media (max-width: 980px) {
             top: 45%;
         }
 
-        svg {
-            transform: rotate(180deg);
-            width: 5rem;
-            height: 5rem;
-
-            use {
-                fill: #fff;
-            }
-
-            @media (max-width: 980px) {
-                width: 3rem;
-                height: 3rem;
-            }
+        @include respond(phone) {
+            left: 1rem;
         }
     }
 
@@ -94,6 +92,10 @@
             font-size: 2.5rem;
         }
 
+        @include respond(phone) {
+            width: 23rem;
+            font-size: 2rem;
+        }
     }
 
     p {
@@ -114,6 +116,12 @@
             font-size: 2rem;
             width: 39rem;
 
+        }
+
+        @include respond(phone) {
+            width: 31rem;
+            font-size: 1.5rem;
+            top: 50%;
         }
     }
 }

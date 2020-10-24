@@ -4,6 +4,10 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @include respond(tab-land) {
+        font-size: 60.52%;
+    }
 }
 
 *,
@@ -23,7 +27,7 @@ body {
 .main__container {
     padding: 0 $padding-sm;
 
-    @media (max-width: 980px) {
+    @include respond(tab-land) {
         padding: 0;
     }
 }

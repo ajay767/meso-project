@@ -30,56 +30,79 @@
 .section__heading {
     &--main {
 
-        font-weight: 700;
-        font-size: 4rem;
-        margin: 2rem 0 .5rem;
+        font-weight: 600;
+        font-size: 3rem;
+        margin: 3rem 0 .5rem;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 3px;
         width: 100%;
         text-align: center;
 
-        @media (max-width: 980px) {
-            font-size: 3rem;
-            font-weight: 400;
+        @include respond(tab-land) {
+            font-size: 2.8rem;
+            font-weight: 500;
         }
 
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        @include respond(phone) {
+            font-size: 2.2rem;
+        }
     }
 
     &--sub {
-        font-size: 3rem;
-        font-weight: 600;
-        margin: .5rem 0;
+        font-size: 2rem;
+        font-weight: 400;
+        margin: .5rem 0 3rem;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 3px;
         width: 100%;
         text-align: center;
 
-        @media (max-width: 980px) {
+        @include respond(tab-land) {
             font-size: 1.9rem;
-            font-weight: 300;
-            letter-spacing: 1.5px;
+            font-weight: 400;
+        }
 
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        @include respond(phone) {
+            font-size: 1.2rem;
         }
     }
 }
 
 .primary__heading {
-    font-size: 2.8rem;
+    font-size: 1.9rem;
     font-weight: 500;
 
-    @media (max-width: 980px) {
-        font-size: 2.3rem;
+    @include respond(tab-land) {
+        font-size: 1.7rem;
         font-weight: 500;
+    }
+
+    @include respond(phone) {
+        font-size: 1.5rem;
     }
 
 }
 
 .primary__paragraph {
-    font-size: $default-font-size;
+    font-size: 1.9rem;
     font-weight: 400;
 
-    @media (max-width: 980px) {
-        font-size: 1.4rem;
-        font-weight: 400;
+    @include respond(tab-land) {
+        font-size: 1.5rem;
+        // font-weight: 500;
+    }
+
+    @include respond(phone) {
+        font-size: 1.3rem;
     }
 }

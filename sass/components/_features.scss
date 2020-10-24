@@ -6,13 +6,19 @@
     grid-gap: 6rem;
     align-items: start;
 
+    @include respond(phone) {
+        width: 80%;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    }
+
     .feature__card {
         width: auto;
 
         display: grid;
         grid-template-columns: min-content 1fr;
         grid-row-gap: 1.5rem;
-        grid-column-gap: 2.5rem;
+        grid-column-gap: 2rem;
 
         &--icon {
             grid-column: 1/2;
@@ -23,7 +29,16 @@
             & svg {
                 height: 4.5rem;
                 width: 4.5rem;
-                fill: $color-green-light
+                fill: $color-green-light;
+
+                @include respond(phone) {
+                    height: 3rem;
+                    width: 3rem;
+                }
+            }
+
+            @include respond(phone) {
+                margin-right: .5rem;
             }
         }
 

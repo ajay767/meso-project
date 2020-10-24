@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 footer {
@@ -101,6 +118,9 @@ footer {
     .landing {
       height: 30rem;
       padding: 1.5rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .landing {
+      height: 22rem; } }
   .landing img {
     z-index: -5;
     height: 100%;
@@ -111,41 +131,38 @@ footer {
     @media (max-width: 980px) {
       .landing img {
         border-radius: 0; } }
+  .landing--navigation-btn {
+    width: 3.5rem;
+    height: 3.5rem; }
+    .landing--navigation-btn use {
+      fill: #fff; }
+    @media (max-width: 980px) {
+      .landing--navigation-btn {
+        width: 3rem;
+        height: 3rem; } }
   .landing--nxt-btn {
     position: absolute;
-    top: 30%;
+    top: 42%;
     right: 3rem;
     cursor: pointer; }
     @media (max-width: 980px) {
       .landing--nxt-btn {
         top: 45%; } }
-    .landing--nxt-btn svg {
-      width: 5rem;
-      height: 5rem; }
-      .landing--nxt-btn svg use {
-        fill: #fff; }
-      @media (max-width: 980px) {
-        .landing--nxt-btn svg {
-          width: 3rem;
-          height: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .landing--nxt-btn {
+        right: 1rem; } }
   .landing--prev-btn {
     position: absolute;
-    top: 30%;
+    top: 42%;
     left: 3rem;
+    transform: rotate(180deg);
     cursor: pointer; }
     @media (max-width: 980px) {
       .landing--prev-btn {
         top: 45%; } }
-    .landing--prev-btn svg {
-      transform: rotate(180deg);
-      width: 5rem;
-      height: 5rem; }
-      .landing--prev-btn svg use {
-        fill: #fff; }
-      @media (max-width: 980px) {
-        .landing--prev-btn svg {
-          width: 3rem;
-          height: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .landing--prev-btn {
+        left: 1rem; } }
   .landing h1 {
     width: 31rem;
     position: absolute;
@@ -162,6 +179,10 @@ footer {
     @media (max-width: 980px) {
       .landing h1 {
         font-size: 2.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .landing h1 {
+        width: 23rem;
+        font-size: 2rem; } }
   .landing p {
     position: absolute;
     top: 48%;
@@ -179,6 +200,11 @@ footer {
       .landing p {
         font-size: 2rem;
         width: 39rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .landing p {
+        width: 31rem;
+        font-size: 1.5rem;
+        top: 50%; } }
 
 .slider {
   max-width: 100rem;
@@ -259,12 +285,12 @@ footer {
   padding: 2rem 0;
   overflow: hidden;
   margin: 9rem 0; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .self-sponser {
       flex-direction: column; } }
   .self-sponser--card {
     position: relative; }
-    @media (max-width: 980px) {
+    @media only screen and (max-width: 75em) {
       .self-sponser--card {
         width: 100%;
         height: 30rem;
@@ -283,9 +309,12 @@ footer {
       grid-template-columns: 8rem 1fr;
       grid-template-rows: 1fr .5fr 1fr;
       overflow: hidden; }
-      @media (max-width: 980px) {
+      @media only screen and (max-width: 75em) {
         .self-sponser--card-container {
           margin: 10rem auto; } }
+      @media only screen and (max-width: 37.5em) {
+        .self-sponser--card-container {
+          width: 75%; } }
       .self-sponser--card-container--playstore {
         width: 5rem;
         align-items: center;
@@ -297,14 +326,23 @@ footer {
         top: -6rem;
         z-index: -10;
         width: 50rem; }
-        @media (max-width: 980px) {
+        @media only screen and (max-width: 75em) {
           .self-sponser--card-container--bg {
             position: absolute;
             left: 0;
             right: 0;
             top: -0.5rem;
-            z-index: -10;
-            width: 50rem;
+            width: 47%;
+            margin-right: auto;
+            margin-left: auto;
+            display: block; } }
+        @media only screen and (max-width: 37.5em) {
+          .self-sponser--card-container--bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -0.5rem;
+            width: 98%;
             margin-right: auto;
             margin-left: auto;
             display: block; } }
@@ -332,14 +370,13 @@ footer {
   text-align: center;
   letter-spacing: 3px;
   width: 43%; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .sponser__content {
-      width: 95%; } }
+      width: 98%; } }
   .sponser__content h1 {
     font-size: 2rem; }
   .sponser__content p {
-    margin-top: 2rem;
-    font-size: 1.6rem; }
+    margin-top: 2rem; }
   .sponser__content--link {
     display: block;
     color: #0b8d0b;
@@ -443,12 +480,16 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-gap: 6rem;
   align-items: start; }
+  @media only screen and (max-width: 37.5em) {
+    .features {
+      width: 80%;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
   .features .feature__card {
     width: auto;
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-row-gap: 1.5rem;
-    grid-column-gap: 2.5rem; }
+    grid-column-gap: 2rem; }
     .features .feature__card--icon {
       grid-column: 1/2;
       grid-row: 1/ span 2;
@@ -458,6 +499,13 @@ footer {
         height: 4.5rem;
         width: 4.5rem;
         fill: #0b8d0b; }
+        @media only screen and (max-width: 37.5em) {
+          .features .feature__card--icon svg {
+            height: 3rem;
+            width: 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .features .feature__card--icon {
+          margin-right: .5rem; } }
     .features .feature__card--title {
       grid-column: 2/3;
       grid-row: 1/2; }
@@ -512,51 +560,72 @@ footer {
       font-size: 1.3rem; } }
 
 .section__heading--main {
-  font-weight: 700;
-  font-size: 4rem;
-  margin: 2rem 0 .5rem;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 3rem 0 .5rem;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   width: 100%;
   text-align: center; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .section__heading--main {
-      font-size: 3rem;
-      font-weight: 400; } }
+      font-size: 2.8rem;
+      font-weight: 500; } }
+  @media only screen and (max-width: 56.25em) {
+    .section__heading--main {
+      font-size: 2.5rem;
+      font-weight: 500; } }
+  @media only screen and (max-width: 37.5em) {
+    .section__heading--main {
+      font-size: 2.2rem; } }
 
 .section__heading--sub {
-  font-size: 3rem;
-  font-weight: 600;
-  margin: .5rem 0;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: .5rem 0 3rem;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   width: 100%;
   text-align: center; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .section__heading--sub {
       font-size: 1.9rem;
-      font-weight: 300;
-      letter-spacing: 1.5px; } }
+      font-weight: 400; } }
+  @media only screen and (max-width: 56.25em) {
+    .section__heading--sub {
+      font-size: 1.5rem;
+      font-weight: 500; } }
+  @media only screen and (max-width: 37.5em) {
+    .section__heading--sub {
+      font-size: 1.2rem; } }
 
 .primary__heading {
-  font-size: 2.8rem;
+  font-size: 1.9rem;
   font-weight: 500; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .primary__heading {
-      font-size: 2.3rem;
+      font-size: 1.7rem;
       font-weight: 500; } }
+  @media only screen and (max-width: 37.5em) {
+    .primary__heading {
+      font-size: 1.5rem; } }
 
 .primary__paragraph {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 400; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .primary__paragraph {
-      font-size: 1.4rem;
-      font-weight: 400; } }
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .primary__paragraph {
+      font-size: 1.3rem; } }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 60.52%; } }
 
 *,
 *::before,
@@ -571,6 +640,6 @@ body {
 
 .main__container {
   padding: 0 1rem; }
-  @media (max-width: 980px) {
+  @media only screen and (max-width: 75em) {
     .main__container {
       padding: 0; } }

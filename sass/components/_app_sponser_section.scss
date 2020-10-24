@@ -7,15 +7,15 @@
     overflow: hidden;
     margin: 9rem 0;
 
-    @media (max-width: 980px) {
+    @include respond(tab-land) {
         flex-direction: column;
     }
-
 
     &--card {
         position: relative;
 
-        @media (max-width: 980px) {
+
+        @include respond(tab-land) {
             width: 100%;
             height: 30rem;
             overflow: hidden;
@@ -36,9 +36,12 @@
             grid-template-rows: 1fr .5fr 1fr;
             overflow: hidden;
 
-            @media (max-width: 980px) {
+            @include respond(tab-land) {
                 margin: 10rem auto;
+            }
 
+            @include respond(phone) {
+                width: 75%;
             }
 
             &--playstore {
@@ -55,17 +58,30 @@
                 z-index: -10;
                 width: 50rem;
 
-                @media (max-width: 980px) {
+                @include respond(tab-land) {
                     position: absolute;
                     left: 0;
                     right: 0;
                     top: -0.5rem;
-                    z-index: -10;
-                    width: 50rem;
+
+                    width: 47%;
                     margin-right: auto;
                     margin-left: auto;
                     display: block;
                 }
+
+                @include respond(phone) {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: -0.5rem;
+
+                    width: 98%;
+                    margin-right: auto;
+                    margin-left: auto;
+                    display: block;
+                }
+
             }
 
 
@@ -106,9 +122,9 @@
     letter-spacing: 3px;
     width: 43%;
 
-    @media (max-width: 980px) {
-        width: 95%;
-    }
+    @include respond (tab-land) {
+     width: 98%;
+ }
 
     & h1 {
         font-size: 2rem;
@@ -116,7 +132,6 @@
 
     & p {
         margin-top: 2rem;
-        font-size: 1.6rem;
     }
 
     &--link {
