@@ -6,8 +6,9 @@ const slider = function() {
 
   let curSlide = 0;
   const maxSlide = slides.length;
+  console.log(maxSlide);
 
-  // Functions
+  // Functions;
   const createDots = function() {
     slides.forEach(function(_, i) {
       dotContainer.insertAdjacentHTML(
@@ -61,6 +62,7 @@ const slider = function() {
 
     activateDot(0);
   };
+
   init();
 
   // Event handlers

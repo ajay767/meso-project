@@ -72,7 +72,7 @@ footer {
     .navigation__searchbar--input {
       border: none;
       height: 100%;
-      width: 92%;
+      width: 95%;
       outline: none;
       font-size: 1.8rem;
       font-weight: 500;
@@ -165,8 +165,8 @@ footer {
 
 .landing {
   position: relative;
-  padding: 1.5rem;
   margin-bottom: 4rem;
+  margin-top: 1rem;
   height: 40rem;
   width: 100%; }
   @media (max-width: 980px) {
@@ -176,16 +176,31 @@ footer {
   @media only screen and (max-width: 37.5em) {
     .landing {
       height: 22rem; } }
-  .landing img {
-    z-index: -5;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    border-radius: 3px; }
-    @media (max-width: 980px) {
-      .landing img {
-        border-radius: 0; } }
+  .landing__slider {
+    max-width: 100%;
+    height: 38rem;
+    overflow: hidden; }
+    .landing__slider--item {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: transform 1s; }
+      .landing__slider--item img {
+        z-index: -5;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        border-radius: 3px; }
+        @media (max-width: 980px) {
+          .landing__slider--item img {
+            border-radius: 0; } }
   .landing--navigation-btn {
     width: 3.5rem;
     height: 3.5rem; }
@@ -196,6 +211,7 @@ footer {
         width: 3rem;
         height: 3rem; } }
   .landing--nxt-btn {
+    z-index: 12;
     position: absolute;
     top: 42%;
     right: 3rem;
@@ -207,6 +223,7 @@ footer {
       .landing--nxt-btn {
         right: 1rem; } }
   .landing--prev-btn {
+    z-index: 12;
     position: absolute;
     top: 42%;
     left: 3rem;
