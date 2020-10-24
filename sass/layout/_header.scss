@@ -108,10 +108,11 @@
             }
 
             &-icon {
-                margin: 0 1.5rem;
+                margin: 0 1rem;
                 fill: $color-light;
-                width: 3rem;
-                height: 3rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                cursor: pointer;
             }
         }
 

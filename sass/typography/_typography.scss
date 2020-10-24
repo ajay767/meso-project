@@ -26,3 +26,60 @@
         }
     }
 }
+
+.section__heading {
+    &--main {
+
+        font-weight: 700;
+        font-size: 4rem;
+        margin: 2rem 0 .5rem;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 3px;
+        width: 100%;
+        text-align: center;
+
+        @media (max-width: 980px) {
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
+    }
+
+    &--sub {
+        font-size: 3rem;
+        font-weight: 600;
+        margin: .5rem 0;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 3px;
+        width: 100%;
+        text-align: center;
+
+        @media (max-width: 980px) {
+            font-size: 1.9rem;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+
+        }
+    }
+}
+
+.primary__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+
+    @media (max-width: 980px) {
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+
+}
+
+.primary__paragraph {
+    font-size: $default-font-size;
+    font-weight: 400;
+
+    @media (max-width: 980px) {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}

@@ -8,7 +8,7 @@
         flex-direction: column;
 
         &--content {
-            width: 50rem;
+            width: 75%;
             font-size: 5rem;
             line-height: 2rem;
             color: $color-gray-light;
@@ -16,12 +16,7 @@
             margin: 1rem 0;
 
             & span {
-                font-size: 2rem;
                 color: $color-gray;
-
-                @media (max-width: 980px) {
-    font-size: 1.5rem;
-}
 
             }
 

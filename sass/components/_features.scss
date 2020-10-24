@@ -30,13 +30,13 @@
         &--title {
             grid-column: 2/3;
             grid-row: 1/2;
-            font-size: 1.9rem;
+            // font-size: 1.9rem;
         }
 
         &--description {
             grid-column: 2/3;
             grid-row: 2/3;
-            font-size: 1.7rem;
+            // font-size: 1.7rem;
             color: $color-gray;
         }
     }
