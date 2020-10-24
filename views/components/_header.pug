@@ -14,7 +14,7 @@
 //- h1 break
 header.navigation
     .navigation__logo Meso
-    .navigation__searchbar
+    form.navigation__searchbar
         input(type="text", placeholder="search").navigation__searchbar--input
         a(href="#").navigation__searchbar--input-link
             img(src="src/img/search.svg", alt="search icon").navigation__searchbar--input-link-btn
@@ -29,8 +29,7 @@ header.navigation
         svg.navigation__link--item.navigation__link--user-icon
             use(xlink:href="src/img/icon-pack-2.svg#menu-3")
         
-        
-        //- .navigation__link--item
-        //-     span
-        //-     span
-        //-     span
+    .alert__box.alert__warning
+        svg.warning
+            use(xlink:href="src/img/icon-pack-2.svg#danger")
+        p.primary__heading Sorry the service is corrently disabled!
