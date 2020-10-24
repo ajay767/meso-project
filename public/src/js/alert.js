@@ -21,7 +21,7 @@ document
 
     value === 'success'
       ? showAlert(successMarkup)
-      : value === 'errorMarkup'
+      : value === 'error'
       ? showAlert(errorMarkup)
       : showAlert(warningMarkup);
 
