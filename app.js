@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
   res.render('home.pug');
 });
 
+app.get('/login', (req, res) => {
+  res.render('login.pug');
+});
+
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/employee', employeeRoute);
 

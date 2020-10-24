@@ -1,0 +1,20 @@
+extends base
+
+block content
+    .main__container.account__section
+        .account__container
+            h1 Lorem, ipsum dolor.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ad praesentium, eos corrupti eius placeat dolores repudiandae ullam exercitationem deleniti magnam, sapiente fugit nisi ipsam, iste assumenda blanditiis labore rem!
+            a(href="#") Signup Now
+        form.account__form
+            h1.account__form-head Sign In
+            label(for="login-input") Email
+            input(type="text",name="email", id="login-input", placeholder="Email or Phone")
+
+            label(for="login-password") Password
+            input(type="password", name="password", id="login-password", placeholder="Password")
+
+            button(type="submit") Sign In
+            .account__form--recover
+                a(href="#").account__recover--forget.primary__paragraph Forget password ?
+                a(href="#").account__recover--signup.primary__paragraph Create new account.

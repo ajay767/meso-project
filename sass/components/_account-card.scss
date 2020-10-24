@@ -1,0 +1,186 @@
+.account__section {
+    width: 100%;
+    min-height: 83rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.616) 45%), url(./../src/img/account-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+}
+
+.account__container {
+    width: 51%;
+
+    @include respond(tab-land) {
+        width: 45%;
+    }
+
+    @include respond(tab-port) {
+        width: 85%;
+    }
+
+    & h1 {
+        font-size: 6rem;
+        color: white;
+        font-weight: 300;
+        margin: 1rem 0;
+
+        @include respond(tab-land) {
+            font-size: 4rem;
+
+        }
+
+        @include respond(tab-port) {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+
+    & p {
+        font-size: 2rem;
+        color: #777676;
+        margin: 1rem 0;
+        width: 85%;
+
+        @include respond(tab-land) {
+            font-size: 1.7rem;
+
+        }
+
+        @include respond(tab-port) {
+            font-size: 1.7rem;
+            margin: 2rem auto;
+            text-align: center;
+        }
+    }
+
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 15rem;
+        height: 5rem;
+        background-color: black;
+        font-size: 1.7rem;
+        text-decoration: none;
+        margin: 1rem 0;
+        padding: 2rem;
+
+        @include respond(tab-land) {
+            width: 13rem;
+            height: 3.5rem;
+            font-size: 1.5rem;
+
+        }
+
+        @include respond(tab-port) {
+            font-size: 1.4rem;
+            margin: 2rem auto;
+            text-align: center;
+        }
+    }
+}
+
+.account__form {
+    padding: 6rem;
+    background-color: #b3daf6;
+    min-height: 55rem;
+    width: 55rem;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+
+    @include respond(tab-land) {
+        width: 45rem;
+        min-height: 49rem;
+        padding: 4rem;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        margin: 3rem 0 0;
+        padding: 3rem;
+
+    }
+
+    & label {
+        margin: 1rem 0;
+        font-size: 1.8rem;
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+
+        }
+    }
+
+    & input {
+        outline: none;
+        padding: 1rem;
+        padding-left: 2rem;
+        border-radius: 3px;
+        border: none;
+        font-size: 1.5rem;
+        width: 95%;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+
+        }
+    }
+
+    & button {
+        color: $color-light;
+        width: 30rem;
+        margin: 2rem auto;
+        font-size: 2rem;
+        height: 4rem;
+        border-radius: 3px;
+        border: none;
+        background: $color-primary;
+        cursor: pointer;
+        font-weight: 300;
+        outline: none;
+
+        @include respond(phone) {
+            font-size: 1.9rem;
+            width: 85%;
+
+        }
+    }
+
+
+    &-head {
+        font-size: 3rem;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+
+        @include respond(phone) {
+            font-size: 2.6rem;
+
+        }
+    }
+
+    &--recover {
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & a {
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+    }
+}

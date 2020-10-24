@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/style.css")
-        script(defer src="src/js/index.js")
-        script(defer src="src/js/landing_slider.js")
-        script(defer src="src/js/alert.js")
+extends base
 
-        title Meso| All you need is here.
-    body
+block content
+    .main__container
+        //- -----Landing section-----
+        include components/_landing
 
-        //- -----navbar-----
-        include components/_header
-        include components/_sidebar
+        h1.section__heading--main Features
+        p.section__heading--sub Lorem, ipsum dolor.
+        include components/_features
 
-        .main__container
-
-            //- -----Landing section-----
-            include components/_landing
-
-            h1.section__heading--main Features
-            p.section__heading--sub Lorem, ipsum dolor.
-            include components/_features
-
-            h1.section__heading--main Get our app on Playstore
-            p.section__heading--sub Lorem ipsum dolor sit amet Lorem, ipsum..
-            include components/app_sponser
+        h1.section__heading--main Get our app on Playstore
+        p.section__heading--sub Lorem ipsum dolor sit amet Lorem, ipsum..
+        include components/app_sponser
 
 
-            h1.section__heading--main What people say about us ?
-            p.section__heading--sub Lorem ipsum dolor sit amet.
-            include components/_review-card
+        h1.section__heading--main What people say about us ?
+        p.section__heading--sub Lorem ipsum dolor sit amet.
+        include components/_review-card
 
-        //-----footer-----
-        include components/_footer
         
         
