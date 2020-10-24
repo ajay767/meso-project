@@ -14,22 +14,25 @@
 //- h1 break
 header.navigation
     .navigation__logo Meso
+
     form.navigation__searchbar
-        input(type="text", placeholder="search").navigation__searchbar--input
-        a(href="#").navigation__searchbar--input-link
-            img(src="src/img/search.svg", alt="search icon").navigation__searchbar--input-link-btn
+        input(type="text", placeholder="search", name="searchQuery").navigation__searchbar--input
+        button(type="submit").navigation__searchbar--input-link
+            svg.navigation__searchbar--input-link-btn
+                use(xlink:href="src/img/icon-pack-2.svg#search")
+      
     .navigation__link
-
-        svg.navigation__link--user-profile.navigation__link--user-icon
-            use(xlink:href="src/img/icon-pack-2.svg#user")
-
-        svg.navigation__link--user-notification.navigation__link--user-icon
-            use(xlink:href="src/img/icon-pack-2.svg#notification")
-
-        svg.navigation__link--item.navigation__link--user-icon
-            use(xlink:href="src/img/icon-pack-2.svg#menu-3")
+        a(href="#")
+            svg.navigation__link--user-profile.navigation__link--user-icon
+                use(xlink:href="src/img/icon-pack-2.svg#user")
+        a(href="#")
+            svg.navigation__link--user-notification.navigation__link--user-icon
+                use(xlink:href="src/img/icon-pack-2.svg#notification")
+        a(href="#")
+            svg.navigation__link--item.navigation__link--user-icon
+                use(xlink:href="src/img/icon-pack-2.svg#menu-3")
         
-    .alert__box.alert__warning
-        svg.warning
-            use(xlink:href="src/img/icon-pack-2.svg#danger")
-        p.primary__heading Sorry the service is corrently disabled!
+    //- .alert__box.alert__error
+    //-     svg
+    //-         use(xlink:href="src/img/icon-pack-2.svg#danger")
+    //-     p.primary__heading Hope you are loving it!!

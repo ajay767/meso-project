@@ -34,9 +34,9 @@ const landingSlider = function() {
   rightBtn.addEventListener('click', nextSlide);
   leftBtn.addEventListener('click', prevSlide);
 
-  setInterval(() => {
-    nextSlide();
-  }, 2500);
+  // setInterval(() => {
+  //   nextSlide();
+  // }, 5000);
 };
 
 landingSlider();

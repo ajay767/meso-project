@@ -47,10 +47,16 @@
             padding-left: 2rem;
 
             &-link {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                outline: none;
+
                 &-btn {
                     display: block;
                     margin: 0.7rem;
                     width: 2.5rem;
+                    height: 2.5rem;
                 }
             }
         }
@@ -125,6 +131,22 @@
     // animation-delay: -2s;
 
     &__warning {
+        background-color: #ffc107;
+        color: $color-dark;
+        border-radius: 3px;
+        padding: $padding-sm;
+        text-align: center;
+    }
+
+    &__success {
+        background-color: #92e433;
+        color: $color-dark;
+        border-radius: 3px;
+        padding: $padding-sm;
+        text-align: center;
+    }
+
+    &__error {
         background-color: #fc3838;
         color: $color-dark;
         border-radius: 3px;
@@ -148,28 +170,15 @@
 
         @include respond(tab-land) {
             width: 95%;
-            top: 13rem;
+            top: 15rem;
         }
 
-        .warning {
+        & svg {
             width: 2.5rem;
             height: 2.5rem;
             margin-right: 2rem;
         }
 
-        .error {
-            width: 2.5rem;
-            height: 2.5rem;
-            margin-right: 2rem;
-            fill: rgb(245, 110, 110);
-        }
-
-        .success {
-            width: 2.5rem;
-            height: 2.5rem;
-            margin-right: 2rem;
-            fill: green;
-        }
     }
 }
 
@@ -178,5 +187,5 @@
 }
 
 .alert__box.hideAlert {
-    transform: translateY(0-1000px);
+    transform: translateY(-1000px);
 }
