@@ -48,19 +48,6 @@
         }
     }
 
-    // & img {
-    //     z-index: -5;
-    //     height: 100%;
-    //     width: 100%;
-    //     object-fit: cover;
-    //     object-position: bottom;
-    //     border-radius: 3px;
-
-    //     @media (max-width: 980px) {
-    //         border-radius: 0;
-    //     }
-    // }
-
     &--navigation-btn {
         width: 3.5rem;
         height: 3.5rem;
@@ -76,7 +63,7 @@
     }
 
     &--nxt-btn {
-        z-index: 12;
+        z-index: 19;
 
         position: absolute;
         top: 42%;
@@ -93,7 +80,7 @@
     }
 
     &--prev-btn {
-        z-index: 12;
+        z-index: 9;
 
         position: absolute;
         top: 42%;

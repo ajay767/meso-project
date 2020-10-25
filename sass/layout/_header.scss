@@ -21,6 +21,11 @@
         color: $color-light;
         font-size: 1.8rem;
 
+        & svg {
+            width: 7rem;
+            height: 3rem;
+        }
+
         @include respond(tab-land) {
             grid-row: 1/2;
             grid-column: 1/2;

@@ -133,6 +133,7 @@
 
         @include respond(phone) {
             font-size: 1.4rem;
+            width: 100%;
 
         }
     }
@@ -152,7 +153,7 @@
 
         @include respond(phone) {
             font-size: 1.9rem;
-            width: 85%;
+            width: 100%;
 
         }
     }
