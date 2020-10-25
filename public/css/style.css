@@ -66,7 +66,7 @@ footer {
   .navigation__searchbar {
     height: 4rem;
     width: 56rem;
-    box-shadow: 0px 2px 2px 0px #5e5d5da8;
+    box-shadow: 0px 2px 2px 0px #a7a6a6;
     background-color: #fff;
     border-radius: 2px;
     overflow: hidden;
@@ -112,7 +112,7 @@ footer {
       position: relative;
       top: -1.2rem;
       right: 2rem;
-      background-color: #F44336;
+      background-color: #f55044;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -866,6 +866,34 @@ footer {
     width: 80%;
     margin: 2rem auto;
     cursor: pointer; }
+
+.page__header {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #108eea;
+  padding: 1rem; }
+  .page__header--icon-box {
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer; }
+    .page__header--icon-box svg {
+      width: 3rem;
+      height: 3rem;
+      margin: 0 1rem;
+      fill: #fff;
+      transform: rotate(180deg); }
+    .page__header--icon-box h1 {
+      color: #fff; }
+  .page__header--sidebar-box {
+    cursor: pointer;
+    grid-column: 2/3;
+    justify-self: end; }
 
 .primary__section__heading {
   margin: 2rem 0 .5rem;

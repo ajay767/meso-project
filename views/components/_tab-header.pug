@@ -1,0 +1,11 @@
+header.page__header
+    .page__header--icon-box.goBackButton
+            svg
+                use(xlink:href="src/img/right.svg#right")
+            -var pageHeaderName = pageName;
+            h1.primary__heading= pageHeaderName
+
+    .page__header--sidebar-box
+        a(href="#")
+            svg.navigation__link--item.navigation__link--user-icon
+                use(xlink:href="src/img/icon-pack-2.svg#menu-3")

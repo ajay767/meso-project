@@ -4,7 +4,7 @@ const errorMarkup = `<div class="alert__box alert__error"><svg><use xlink:href="
 
 function showAlert(typeOfAlert, msg) {
   const alertMsg = typeOfAlert.replace('MESSAGE', msg);
-  const header = document.querySelector('.navigation');
+  const header = document.querySelector('header');
   header.insertAdjacentHTML('beforeend', alertMsg);
   setTimeout(() => {
     document.querySelector('.alert__box').classList.add('showAlert');
@@ -16,20 +16,18 @@ function hideAlert() {
   if (el) el.parentElement.removeChild(el);
 }
 
-document
-  .querySelector('.navigation__searchbar')
-  .addEventListener('submit', e => {
-    const value = document.querySelector('.navigation__searchbar--input').value;
-    console.log(value);
+document.querySelector('header').addEventListener('submit', e => {
+  const value = document.querySelector('.navigation__searchbar--input').value;
+  console.log(value);
 
-    value === 'success'
-      ? showAlert(successMarkup, 'hum honge kamyabbb ek din!!')
-      : value === 'error'
-      ? showAlert(errorMarkup, 'Beta ERROR aarha h!!')
-      : showAlert(warningMarkup, 'Hey! you have got a warning!');
+  value === 'success'
+    ? showAlert(successMarkup, 'hum honge kamyabbb ek din!!')
+    : value === 'error'
+    ? showAlert(errorMarkup, 'Beta ERROR aarha h!!')
+    : showAlert(warningMarkup, 'Hey! you have got a warning!');
 
-    setTimeout(() => {
-      hideAlert();
-    }, 3000);
-    e.preventDefault();
-  });
+  setTimeout(() => {
+    hideAlert();
+  }, 3000);
+  e.preventDefault();
+});

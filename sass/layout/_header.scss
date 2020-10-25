@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 3px 1px $color-black-visible;
 
     @include respond(tab-land) {
         grid-template-rows: repeat(2, 1fr);
@@ -36,7 +36,7 @@
     &__searchbar {
         height: 4rem;
         width: 56rem;
-        box-shadow: 0px 2px 2px 0px #5e5d5da8;
+        box-shadow: 0px 2px 2px 0px $color-gray-light;
         background-color: $color-light;
         border-radius: 2px;
         overflow: hidden;
@@ -96,7 +96,7 @@
             position: relative;
             top: -1.2rem;
             right: 2rem;
-            background-color: #F44336;
+            background-color: $color-red;
             border-radius: 50%;
 
 
@@ -167,7 +167,7 @@
     // animation-delay: -2s;
 
     &__warning {
-        background-color: #ffc107;
+        background-color: $color-warning;
         color: $color-dark;
         border-radius: 3px;
         padding: $padding-sm;
@@ -175,7 +175,7 @@
     }
 
     &__success {
-        background-color: #92e433;
+        background-color: $color-success;
         color: $color-dark;
         border-radius: 3px;
         padding: $padding-sm;
@@ -183,7 +183,7 @@
     }
 
     &__error {
-        background-color: #fc3838;
+        background-color: $color-error;
         color: $color-dark;
         border-radius: 3px;
         padding: $padding-sm;

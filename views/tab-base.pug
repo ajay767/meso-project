@@ -6,17 +6,17 @@ html(lang="en")
         link(rel="shortcut icon", href="src/img/logo-primary.jpg", type="image/x-icon")
         link(rel="stylesheet", href="css/style.css")
         script(defer src="src/js/index.js")
-        script(defer src="src/js/landing_slider.js")
         script(defer src="src/js/alert.js")
+        script(defer src="src/js/function.js")
+        -var userPageId = userID;
+        title= userPageId
 
-        title Meso| All you need is here.
     body
-
-        //- -----navbar-----
-        include components/_header
+        //- ---navbar header for tab page (notification,messages,profile)
+        include components/_tab-header
         include components/_sidebar
 
         block content
 
-        //-----footer-----
+        //-footer
         include components/_footer

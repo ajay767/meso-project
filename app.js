@@ -32,7 +32,10 @@ app.get('/signup', (req, res) => {
 });
 
 app.get('/me', (req, res) => {
-  res.render('me-user.pug');
+  res.render('me-user.pug', {
+    userID: `2824734739id44m`,
+    pageName: 'My profile'
+  });
 });
 
 app.use('/api/v1/users', userRoute);
