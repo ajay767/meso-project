@@ -100,6 +100,8 @@ footer {
     justify-self: right;
     display: flex;
     align-items: center; }
+    .navigation__link a {
+      text-decoration: none; }
     @media only screen and (max-width: 75em) {
       .navigation__link {
         grid-row: 1/2;
