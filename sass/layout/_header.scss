@@ -24,6 +24,7 @@
         & svg {
             width: 7rem;
             height: 3rem;
+            margin-top: 0.9rem;
         }
 
         @include respond(tab-land) {

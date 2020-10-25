@@ -5,7 +5,9 @@ const errorMarkup = `<div class="alert__box alert__error"><svg><use xlink:href="
 function showAlert(typeOfAlert) {
   const header = document.querySelector('.navigation');
   header.insertAdjacentHTML('beforeend', typeOfAlert);
-  document.querySelector('.alert__box').classList.add('showAlert');
+  setTimeout(() => {
+    document.querySelector('.alert__box').classList.add('showAlert');
+  }, 400);
 }
 
 function hideAlert() {
