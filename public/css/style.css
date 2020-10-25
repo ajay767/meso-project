@@ -780,7 +780,12 @@ footer {
       text-decoration: none; }
 
 .account__form--signup {
-  background-color: #fff; }
+  background-color: #fff;
+  height: 60rem;
+  width: 50rem; }
+  @media only screen and (max-width: 37.5em) {
+    .account__form--signup {
+      width: auto; } }
   .account__form--signup--bg {
     width: 100%;
     padding: 1rem;
@@ -814,7 +819,7 @@ footer {
     color: #2a2a2a;
     margin: 1rem;
     font-weight: 600; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 75em) {
       .account__form--signup label {
         width: max-content;
         margin: 1rem auto; } }
@@ -828,7 +833,7 @@ footer {
     display: block;
     width: 43%;
     margin: 1rem; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 75em) {
       .account__form--signup input {
         width: max-content;
         margin: 1rem auto; } }

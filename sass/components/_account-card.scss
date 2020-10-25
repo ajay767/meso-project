@@ -189,6 +189,12 @@
 
 .account__form--signup {
     background-color: $color-light;
+    height: 60rem;
+    width: 50rem;
+
+    @include respond(phone) {
+        width: auto;
+    }
 
     &--bg {
         width: 100%;
@@ -234,7 +240,7 @@
         margin: 1rem;
         font-weight: 600;
 
-        @include respond(phone) {
+        @include respond(tab-land) {
             width: max-content;
             margin: 1rem auto;
         }
@@ -251,7 +257,7 @@
         width: 43%;
         margin: 1rem;
 
-        @include respond(phone) {
+        @include respond(tab-land) {
             width: max-content;
             margin: 1rem auto;
         }
