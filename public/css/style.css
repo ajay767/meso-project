@@ -995,39 +995,48 @@ body {
   max-width: 50rem;
   padding: 2rem;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: min-content max-content max-content;
   border-radius: 3px;
   margin: 1rem 1rem;
   background-color: #e5e5e5; }
+  @media only screen and (max-width: 37.5em) {
+    .manage__profile--user-card {
+      padding: 1rem; } }
   .manage__profile--user-card-image {
     height: 9rem;
     width: 9rem;
     border-radius: 50%;
-    grid-row: 1/3;
+    grid-row: 1/4;
     grid-column: 1/2;
     margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .manage__profile--user-card-image {
+        margin-right: 1rem; } }
   .manage__profile--user-card-name {
-    font-size: 1.8rem;
     grid-row: 1/2;
     grid-column: 2/3;
     align-self: center;
     margin: 0 1rem; }
-  .manage__profile--user-card-age {
-    align-self: center;
-    font-size: 1.6rem;
-    grid-row: 2/3;
-    margin: 0 1rem;
-    grid-column: 2/3; }
   .manage__profile--user-card-id {
     align-self: center;
     margin: 0 1rem;
-    font-size: 1.4rem;
-    grid-row: 1/2;
-    grid-column: 3/4;
+    grid-row: 2/3;
+    grid-column: 2/4;
     font-weight: 600; }
+  .manage__profile--user-card-age {
+    align-self: center;
+    grid-row: 3/4;
+    margin: 0 1rem;
+    grid-column: 2/3; }
+    @media only screen and (max-width: 37.5em) {
+      .manage__profile--user-card-age {
+        grid-area: 3/2/4/4; } }
   .manage__profile--user-card-dob {
     align-self: center;
-    font-size: 1.6rem;
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-column: 3/4; }
+    @media only screen and (max-width: 37.5em) {
+      .manage__profile--user-card-dob {
+        grid-area: 3/2/4/4;
+        justify-self: end; } }
