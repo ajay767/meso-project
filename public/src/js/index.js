@@ -102,4 +102,9 @@ const slider = function() {
 };
 
 navbarToggle();
-slider();
+
+const isSlidesPresent = document.querySelectorAll('.slide');
+
+if (isSlidesPresent.length !== 0) {
+  slider();
+}

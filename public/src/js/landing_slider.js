@@ -33,10 +33,9 @@ const landingSlider = function() {
 
   rightBtn.addEventListener('click', nextSlide);
   leftBtn.addEventListener('click', prevSlide);
-
-  // setInterval(() => {
-  //   nextSlide();
-  // }, 5000);
 };
+const isLandingSlides = document.querySelectorAll('.landing__slider--item');
 
-landingSlider();
+if (isLandingSlides.length !== 0) {
+  landingSlider();
+}

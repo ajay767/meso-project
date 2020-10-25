@@ -706,7 +706,7 @@ footer {
         margin: 2rem auto;
         text-align: center; } }
 
-.account__form {
+.account__form--login {
   padding: 6rem;
   background-color: #b3daf6;
   min-height: 55rem;
@@ -717,22 +717,22 @@ footer {
   align-items: start;
   flex-direction: column; }
   @media only screen and (max-width: 75em) {
-    .account__form {
+    .account__form--login {
       width: 45rem;
       min-height: 49rem;
       padding: 4rem; } }
   @media only screen and (max-width: 37.5em) {
-    .account__form {
+    .account__form--login {
       width: 100%;
       margin: 3rem 0 0;
       padding: 3rem; } }
-  .account__form label {
+  .account__form--login label {
     margin: 1rem 0;
     font-size: 1.8rem; }
     @media only screen and (max-width: 37.5em) {
-      .account__form label {
+      .account__form--login label {
         font-size: 1.6rem; } }
-  .account__form input {
+  .account__form--login input {
     outline: none;
     padding: 1rem;
     padding-left: 2rem;
@@ -741,10 +741,10 @@ footer {
     font-size: 1.5rem;
     width: 95%; }
     @media only screen and (max-width: 37.5em) {
-      .account__form input {
+      .account__form--login input {
         font-size: 1.4rem;
         width: 100%; } }
-  .account__form button {
+  .account__form--login button {
     color: #fff;
     width: 30rem;
     margin: 2rem auto;
@@ -757,27 +757,92 @@ footer {
     font-weight: 300;
     outline: none; }
     @media only screen and (max-width: 37.5em) {
-      .account__form button {
+      .account__form--login button {
         font-size: 1.9rem;
         width: 100%; } }
-  .account__form-head {
+  .account__form--login-head {
     font-size: 3rem;
     font-weight: 400;
     width: 100%;
     text-align: center;
     margin-bottom: 3rem; }
     @media only screen and (max-width: 37.5em) {
-      .account__form-head {
+      .account__form--login-head {
         font-size: 2.6rem; } }
-  .account__form--recover {
+  .account__form--login--recover {
     margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .account__form--recover a {
+    .account__form--login--recover a {
       font-size: 1.5rem;
       text-decoration: none; }
+
+.account__form--signup {
+  background-color: #fff; }
+  .account__form--signup--bg {
+    width: 100%;
+    padding: 1rem;
+    background-color: #108eea;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    .account__form--signup--bg img {
+      grid-row: 1/3;
+      grid-column: 1/2;
+      width: 85%; }
+    .account__form--signup--bg h2 {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      width: 95%;
+      align-self: end;
+      font-size: 2rem;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1rem; }
+    .account__form--signup--bg p {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      width: 95%;
+      align-self: start;
+      color: #2a2a2a;
+      font-size: 1.7rem; }
+  .account__form--signup label {
+    display: block;
+    font-size: 1.9rem;
+    color: #2a2a2a;
+    margin: 1rem;
+    font-weight: 600; }
+    @media only screen and (max-width: 37.5em) {
+      .account__form--signup label {
+        width: max-content;
+        margin: 1rem auto; } }
+  .account__form--signup input {
+    outline: none;
+    padding: 1rem;
+    padding-left: 2rem;
+    border: none;
+    border-bottom: 2px solid #108eea;
+    font-size: 1.5rem;
+    display: block;
+    width: 43%;
+    margin: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .account__form--signup input {
+        width: max-content;
+        margin: 1rem auto; } }
+  .account__form--signup button {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    padding: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+    cursor: pointer; }
 
 .primary__section__heading {
   margin: 2rem 0 .5rem;
@@ -885,3 +950,61 @@ body {
   @media only screen and (max-width: 75em) {
     .main__container {
       padding: 0; } }
+
+.manage__profile--nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  background: #e2a51d;
+  color: white;
+  margin-bottom: 2rem; }
+  .manage__profile--nav-icon {
+    cursor: pointer;
+    margin: 0 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: rotate(180deg);
+    fill: white; }
+
+.manage__profile--user-card {
+  max-width: 50rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: min-content max-content max-content;
+  border-radius: 3px;
+  margin: 1rem 1rem;
+  background-color: #e5e5e5; }
+  .manage__profile--user-card-image {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    margin-right: 2rem; }
+  .manage__profile--user-card-name {
+    font-size: 1.8rem;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-self: center;
+    margin: 0 1rem; }
+  .manage__profile--user-card-age {
+    align-self: center;
+    font-size: 1.6rem;
+    grid-row: 2/3;
+    margin: 0 1rem;
+    grid-column: 2/3; }
+  .manage__profile--user-card-id {
+    align-self: center;
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    font-weight: 600; }
+  .manage__profile--user-card-dob {
+    align-self: center;
+    font-size: 1.6rem;
+    grid-row: 2/3;
+    grid-column: 3/4; }

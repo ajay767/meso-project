@@ -1,0 +1,11 @@
+extends auth
+
+block form
+    form.account__form--signup
+        .account__form--signup--bg
+            img(src="src/img/signup-user.png", alt="signup user picture")
+            h2 Welcome !!
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta!
+        label(for="mobile") Enter your Mobile 
+        input(type="text", id="mobile", placeholder="Mobile number")
+        button(type="submit") Request OTP

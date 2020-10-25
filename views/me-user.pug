@@ -1,0 +1,18 @@
+extends base
+
+block content
+    .main__container
+        .manage__profile
+
+            .manage__profile--nav
+                svg.manage__profile--nav-icon
+                    use(xlink:href="src/img/right.svg#right")
+                | Manage profile
+
+            .manage__profile--user
+                .manage__profile--user-card
+                    img.manage__profile--user-card-image(src="src/img/doctor-dp.jpg", alt="user profile")
+                    h1.manage__profile--user-card-name Anjali singh
+                    p.manage__profile--user-card-id User-ID 32378937df3964hd
+                    span.manage__profile--user-card-age 21 yr
+                    span.manage__profile--user-card-dob 14th nov 1996

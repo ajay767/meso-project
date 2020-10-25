@@ -27,6 +27,14 @@ app.get('/login', (req, res) => {
   res.render('login.pug');
 });
 
+app.get('/signup', (req, res) => {
+  res.render('signup.pug');
+});
+
+app.get('/me', (req, res) => {
+  res.render('me-user.pug');
+});
+
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/employee', employeeRoute);
 
