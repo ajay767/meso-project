@@ -28,6 +28,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
     display: none; } }
 
 footer {
+  position: sticky;
+  bottom: 0;
   padding: 1rem;
   width: 100%;
   height: 5rem;
@@ -868,6 +870,7 @@ footer {
     cursor: pointer; }
 
 .page__header {
+  height: 8rem;
   z-index: 10;
   position: sticky;
   top: 0;
@@ -883,8 +886,8 @@ footer {
     justify-content: flex-start;
     cursor: pointer; }
     .page__header--icon-box svg {
-      width: 3rem;
-      height: 3rem;
+      width: 4.5rem;
+      height: 4.5rem;
       margin: 0 1rem;
       fill: #fff;
       transform: rotate(180deg); }
@@ -893,7 +896,26 @@ footer {
   .page__header--sidebar-box {
     cursor: pointer;
     grid-column: 2/3;
-    justify-self: end; }
+    justify-self: end;
+    align-self: center; }
+
+.notification__container--card {
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+  list-style: none;
+  padding: 1rem;
+  margin: .3rem 0 0; }
+  .notification__container--card:not(:nth-child(1)) {
+    margin: 0; }
+  .notification__container--card a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #108eea; }
+    .notification__container--card a svg {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 2rem; }
 
 .primary__section__heading {
   margin: 2rem 0 .5rem;
@@ -958,15 +980,15 @@ footer {
       font-size: 1.2rem; } }
 
 .primary__heading {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 500; }
   @media only screen and (max-width: 75em) {
     .primary__heading {
-      font-size: 1.7rem;
+      font-size: 2rem;
       font-weight: 500; } }
   @media only screen and (max-width: 37.5em) {
     .primary__heading {
-      font-size: 1.5rem; } }
+      font-size: 1.8rem; } }
 
 .primary__paragraph {
   font-size: 1.9rem;
@@ -997,7 +1019,8 @@ body {
   position: relative; }
 
 .main__container {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  min-height: 90vh; }
   @media only screen and (max-width: 75em) {
     .main__container {
       padding: 0; } }

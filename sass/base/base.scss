@@ -26,6 +26,7 @@ body {
 
 .main__container {
     padding: 0 $padding-sm;
+    min-height: 90vh;
 
     @include respond(tab-land) {
         padding: 0;

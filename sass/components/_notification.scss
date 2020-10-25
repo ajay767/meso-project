@@ -1,0 +1,28 @@
+.notification__container {
+    &--card {
+        border-top: 1px solid rgb(71, 71, 71);
+        border-bottom: 1px solid rgb(71, 71, 71);
+        list-style: none;
+        padding: $padding-sm;
+        margin: .3rem 0 0;
+
+        &:not(:nth-child(1)) {
+            margin: 0;
+        }
+
+
+
+        & a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $color-primary;
+
+            & svg {
+                width: 3rem;
+                height: 3rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+}

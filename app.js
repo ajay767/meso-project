@@ -38,6 +38,13 @@ app.get('/me', (req, res) => {
   });
 });
 
+app.get('/notification', (req, res) => {
+  res.render('notification.pug', {
+    userID: `AIR health card | Notification`,
+    pageName: 'Notification'
+  });
+});
+
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/employee', employeeRoute);
 
