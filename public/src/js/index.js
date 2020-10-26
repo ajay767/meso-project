@@ -2,7 +2,6 @@ import { showAlert } from './alert';
 import { navbarToggler } from './navbarToggler';
 import { landingSlider } from './landing_slider.js';
 import { reviewSlider } from './reviewSlider';
-import e from 'express';
 
 if (document.querySelector('.navigation__searchbar')) {
   const form = document.querySelector('.navigation__searchbar');
