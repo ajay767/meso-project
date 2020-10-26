@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "watch-sass":"node-sass sass/main.scss public/css/style.css -w",
+    "watch-sass": "node-sass sass/main.scss public/css/style.css -w",
     "start": "nodemon server.js",
-    "start:prod": "SET NODE_ENV=production&& nodemon server.js"
+    "start:prod": "SET NODE_ENV=production&& nodemon server.js",
+    "watch:js": "parcel watch ./public/src/js/index.js --out-dir ./public/src/js --out-file bundle.js",
+    "build:js": "parcel build ./public/src/js/index.js --out-dir ./public/src/js --out-file bundle.js"
   },
   "author": "meso tech team",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "mongoose": "^5.9.27",
     "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4",
     "pug": "^3.0.0",
     "slugify": "^1.4.5"
   },

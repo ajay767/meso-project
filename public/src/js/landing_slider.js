@@ -1,9 +1,7 @@
-const landingSlider = function() {
-  console.log('connected!!');
+export const landingSlider = function() {
   const slides = document.querySelectorAll('.landing__slider--item');
   const leftBtn = document.querySelector('.landing--prev-btn');
   const rightBtn = document.querySelector('.landing--nxt-btn');
-  console.log(slides);
   let curSlide = 0;
   const maxSlide = slides.length;
 
@@ -34,8 +32,3 @@ const landingSlider = function() {
   rightBtn.addEventListener('click', nextSlide);
   leftBtn.addEventListener('click', prevSlide);
 };
-const isLandingSlides = document.querySelectorAll('.landing__slider--item');
-
-if (isLandingSlides.length !== 0) {
-  landingSlider();
-}
