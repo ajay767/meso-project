@@ -28,7 +28,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     display: none; } }
 
 footer {
-  position: sticky;
+  position: static;
   bottom: 0;
   padding: 1rem;
   width: 100%;
