@@ -7,6 +7,90 @@
         margin: 0 1rem;
     }
 
+    &__location {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0;
+
+        &--gps {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+
+            & h1 {
+                font-size: 2rem;
+            }
+
+            & svg {
+                margin-right: 1rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                fill: $color-primary;
+            }
+        }
+
+        &--manual {
+            display: flex;
+
+            & input {
+                height: 5rem;
+                width: 30rem;
+                border: none;
+                font-size: 1.7rem;
+                background: $color-gray-very-light;
+                height: 5rem;
+                padding-left: 1rem;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-radius: 2px;
+                outline: none;
+
+                @include respond(tab-land) {
+                    height: 4rem;
+                    width: 20rem;
+                    font-size: 1.5rem;
+                }
+
+                @include respond(phone) {
+                    // height: 3rem;
+                    width: auto;
+                    // font-size: 1.3rem;
+                }
+            }
+
+            & button {
+                border-radius: 2px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                outline: none;
+                border: none;
+                height: 5rem;
+                background-color: $color-gray-very-light;
+                margin-left: -2px;
+                cursor: pointer;
+
+                @include respond(tab-land) {
+                    height: 4rem;
+
+                }
+
+                @include respond(phone) {
+                    // height: 3rem;
+
+                }
+
+                & svg {
+
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    fill: $color-dark;
+                }
+            }
+        }
+
+    }
+
     &__quick-branch {
         margin: 2rem auto;
         display: flex;
@@ -31,8 +115,8 @@
 
         @include respond(tab-port) {
             padding: 1rem 0rem;
-            border-bottom: 1px solid $color-gray;
-            border-top: 1px solid $color-gray;
+            border-bottom: 1px solid $color-gray-light;
+            // border-top: 1px solid $color-gray;
         }
 
         &--name-box {
@@ -67,7 +151,7 @@
             }
 
             & img {
-                z-index: 3;
+
                 width: 9rem;
                 height: 9rem;
                 border-radius: 50%;

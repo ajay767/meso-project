@@ -2,6 +2,9 @@ import { showAlert } from './alert';
 import { navbarToggler } from './navbarToggler';
 import { landingSlider } from './landing_slider.js';
 import { reviewSlider } from './reviewSlider';
+import { getCurrentLocation } from './getLocation';
+
+getCurrentLocation();
 
 if (document.querySelector('.navigation__searchbar')) {
   const form = document.querySelector('.navigation__searchbar');
@@ -26,5 +29,14 @@ if (document.querySelector('.reviews.slider')) reviewSlider();
 
 if (document.querySelectorAll('.landing__slider--item').length !== 0)
   landingSlider();
+
+document
+  .querySelector('#location-search-form')
+  .addEventListener('submit', e => {
+    const query = document.querySelector('#location-search-form-input').value;
+    alert(query);
+    navigator.geolocation.getCurrentPosition(position => {});
+    e.preventDefault();
+  });
 
 navbarToggler();

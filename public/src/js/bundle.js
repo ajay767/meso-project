@@ -383,6 +383,36 @@ var reviewSlider = function reviewSlider() {
 };
 
 exports.reviewSlider = reviewSlider;
+},{}],"getLocation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getCurrentLocation = void 0;
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+  console.log('Your current position is:');
+  console.log("Latitude : ".concat(crd.latitude));
+  console.log("Longitude: ".concat(crd.longitude));
+  console.log("More or less ".concat(crd.accuracy, " meters."));
+}
+
+function error(err) {
+  console.warn("ERROR(".concat(err.code, "): ").concat(err.message));
+}
+
+var getCurrentLocation = function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(success, error, options);
+};
+
+exports.getCurrentLocation = getCurrentLocation;
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -393,6 +423,10 @@ var _navbarToggler = require("./navbarToggler");
 var _landing_slider = require("./landing_slider.js");
 
 var _reviewSlider = require("./reviewSlider");
+
+var _getLocation = require("./getLocation");
+
+(0, _getLocation.getCurrentLocation)();
 
 if (document.querySelector('.navigation__searchbar')) {
   var form = document.querySelector('.navigation__searchbar');
@@ -414,8 +448,14 @@ var goToPreviousPage = function goToPreviousPage() {
 if (document.querySelector('.goBackButton')) goToPreviousPage();
 if (document.querySelector('.reviews.slider')) (0, _reviewSlider.reviewSlider)();
 if (document.querySelectorAll('.landing__slider--item').length !== 0) (0, _landing_slider.landingSlider)();
+document.querySelector('#location-search-form').addEventListener('submit', function (e) {
+  var query = document.querySelector('#location-search-form-input').value;
+  alert(query);
+  navigator.geolocation.getCurrentPosition(function (position) {});
+  e.preventDefault();
+});
 (0, _navbarToggler.navbarToggler)();
-},{"./alert":"alert.js","./navbarToggler":"navbarToggler.js","./landing_slider.js":"landing_slider.js","./reviewSlider":"reviewSlider.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./alert":"alert.js","./navbarToggler":"navbarToggler.js","./landing_slider.js":"landing_slider.js","./reviewSlider":"reviewSlider.js","./getLocation":"getLocation.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -443,7 +483,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50181" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54098" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

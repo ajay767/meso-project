@@ -3,10 +3,20 @@ extend base
 block content
     .main__container
         .app__home
+            .app__home__location
+                .app__home__location--gps
+                    svg
+                       use(xlink:href="src/img/icon-pack-2.svg#maps-and-flags")
+                    h1 Kolkata
+                form.app__home__location--manual#location-search-form
+                    input(type="text", placeholder="Location")#location-search-form-input
+                    button(type="submit")
+                        svg.navigation__searchbar--input-link-btn
+                            use(xlink:href="src/img/icon-pack-2.svg#search")
+
+            h1.primary__heading Top Specialities
             .app__home__quick-branch
                 a(href="#")
-                    svg.app__home__quick-branch--placeholder
-                        use(xlink:href="src/img/icon-pack-2.svg#home")
                     img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
                     p.primary__paragraph Ayurweda
                 a(href="#")
@@ -50,7 +60,7 @@ block content
                     p.primary__paragraph Ayurweda
 
 
-            h1.section__heading Top Doctors Near you
+            h1.primary__heading Top Doctors Near you
             .app__home__quick-branch
                 a(href="/doctor/Dr soni yadav")
                     img(src="src/img/doctor1.jpg", alt="Ayurwed department")
@@ -69,7 +79,22 @@ block content
                     p.primary__paragraph.app__home__quick-branch--name-box  Dr Sunita yadav
 
 
-            h1.section__heading Top Hospitals Near you
+            h1.primary__heading Top Hospitals Near you
+            .app__home__quick-branch
+                a(href="#")
+                    img(src="src/img/carsoul1.jpg", alt="Ayurwed department")
+                    p.primary__paragraph Maruti Nandan
+                a(href="#")
+                    img(src="src/img/carsoul2.jpg", alt="Ayurwed department")
+                    p.primary__paragraph Gokila Ben
+                a(href="#")
+                    img(src="src/img/carsoul3.jpg", alt="Ayurwed department")
+                    p.primary__paragraph Apollo
+                a(href="#")
+                    img(src="src/img/carsoul4.jpg", alt="Ayurwed department")
+                    p.primary__paragraph Lala lajpat Ray
+
+            h1.primary__heading Medical clinics Near you
             .app__home__quick-branch
                 a(href="#")
                     img(src="src/img/carsoul1.jpg", alt="Ayurwed department")
