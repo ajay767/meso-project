@@ -1,23 +1,28 @@
 .app__home {
-    width: 65%;
+    width: max-content;
     margin: 2rem auto;
 
     @include respond(tab-land) {
         width: auto;
+        margin: 0 1rem;
     }
 
     &__quick-branch {
         margin: 2rem auto;
         display: flex;
         justify-content: center;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        flex-grow: 0;
 
         @include respond(tab-port) {
             padding: 1rem;
-            overflow-x: scroll;
-            flex-wrap: nowrap;
-            flex-shrink: 0;
-            flex-grow: 0;
-            justify-content: flex-start;
+            // overflow-x: scroll;
+            // flex-wrap: nowrap;
+            // flex-shrink: 0;
+            // flex-grow: 0;
         }
 
         & a {
@@ -27,21 +32,24 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
 
             @include respond(tab-port) {
                 padding: 0 1rem;
-                align-items: center;
             }
 
             & p {
                 color: $color-primary;
                 margin-top: .5rem;
+                text-align: center;
+                height: 4rem;
             }
 
             & img {
                 width: 9rem;
                 height: 9rem;
                 border-radius: 50%;
+                object-fit: cover;
 
                 @include respond(tab-port) {
 
