@@ -10,7 +10,12 @@ const globalErrorHandler = require('./controller/errorController');
 const app = express();
 
 app.use(express.json());
-app.use(express.static('public'));
+
+//serving static file path
+app.use(express.static(`${__dirname}./../public`));
+app.use('*/css', express.static('public/css'));
+app.use('*/src', express.static('public/src'));
+
 app.set('view engine', 'pug');
 app.use(morgan('dev'));
 
@@ -39,6 +44,14 @@ app.get('/me', (req, res) => {
   res.render('me-user.pug', {
     userID: `2824734739id44m`,
     pageName: 'My profile'
+  });
+});
+
+app.get('/doctor/:drName', (req, res) => {
+  const drName = req.params.drName;
+  res.render('user-profile.pug', {
+    userID: `2824734739id44m`,
+    pageName: drName
   });
 });
 

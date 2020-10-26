@@ -1041,10 +1041,20 @@ body {
     flex-wrap: nowrap;
     flex-shrink: 0;
     flex-grow: 0; }
+    .app__home__quick-branch--placeholder {
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      top: 10px;
+      fill: red;
+      margin: auto;
+      margin-right: auto;
+      margin-left: auto; }
     @media only screen and (max-width: 56.25em) {
       .app__home__quick-branch {
         padding: 0rem; } }
     .app__home__quick-branch a {
+      position: relative;
       padding: 0 2rem;
       margin-right: .5rem;
       text-decoration: none;
@@ -1063,6 +1073,7 @@ body {
         text-align: center;
         height: 4rem; }
       .app__home__quick-branch a img {
+        z-index: 3;
         width: 9rem;
         height: 9rem;
         border-radius: 50%;
