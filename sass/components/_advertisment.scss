@@ -1,0 +1,31 @@
+.advertisment {
+    margin: 1.5rem 0;
+
+    &__container {
+
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-grow: 0;
+        flex-shrink: 0;
+        overflow-x: auto;
+
+        &--card {
+            margin: 0 1.5rem;
+
+            &:first-child {
+                margin: 0;
+                margin-right: 1.5rem;
+            }
+
+            & a {
+                display: flex;
+                text-decoration: none;
+
+                & img {
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}

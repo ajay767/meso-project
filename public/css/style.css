@@ -917,6 +917,26 @@ footer {
       height: 3rem;
       margin-right: 2rem; }
 
+.advertisment {
+  margin: 1.5rem 0; }
+  .advertisment__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow-x: auto; }
+    .advertisment__container--card {
+      margin: 0 1.5rem; }
+      .advertisment__container--card:first-child {
+        margin: 0;
+        margin-right: 1.5rem; }
+      .advertisment__container--card a {
+        display: flex;
+        text-decoration: none; }
+        .advertisment__container--card a img {
+          border-radius: 3px; }
+
 .primary__section__heading {
   margin: 2rem 0 .5rem;
   font-size: 3.5rem;
