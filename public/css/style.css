@@ -1052,6 +1052,7 @@ body {
       justify-content: center; }
       @media only screen and (max-width: 56.25em) {
         .app__home__quick-branch a {
+          padding: 0 1rem;
           align-items: center; } }
       .app__home__quick-branch a p {
         color: #108eea;
