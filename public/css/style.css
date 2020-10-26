@@ -1052,7 +1052,11 @@ body {
       margin-left: auto; }
     @media only screen and (max-width: 56.25em) {
       .app__home__quick-branch {
-        padding: 0rem; } }
+        padding: 1rem 0rem;
+        border-bottom: 1px solid #444343;
+        border-top: 1px solid #444343; } }
+    .app__home__quick-branch--name-box {
+      height: 4rem; }
     .app__home__quick-branch a {
       position: relative;
       padding: 0 2rem;
@@ -1070,8 +1074,7 @@ body {
       .app__home__quick-branch a p {
         color: #108eea;
         margin-top: .5rem;
-        text-align: center;
-        height: 4rem; }
+        text-align: center; }
       .app__home__quick-branch a img {
         z-index: 3;
         width: 9rem;

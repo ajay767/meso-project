@@ -30,7 +30,14 @@
         }
 
         @include respond(tab-port) {
-            padding: 0rem;
+            padding: 1rem 0rem;
+            border-bottom: 1px solid $color-gray;
+            border-top: 1px solid $color-gray;
+        }
+
+        &--name-box {
+            height: 4rem;
+
         }
 
         & a {
@@ -51,11 +58,12 @@
                 }
             }
 
+
+
             & p {
                 color: $color-primary;
                 margin-top: .5rem;
                 text-align: center;
-                height: 4rem;
             }
 
             & img {
