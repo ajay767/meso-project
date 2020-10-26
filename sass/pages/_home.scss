@@ -44,6 +44,7 @@
                 border-radius: 50%;
 
                 @include respond(tab-port) {
+
                     width: 7rem;
                     height: 7rem;
                 }
