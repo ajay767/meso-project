@@ -1063,8 +1063,8 @@ body {
         border-radius: 50%; }
         @media only screen and (max-width: 56.25em) {
           .app__home__quick-branch a img {
-            width: 5rem;
-            height: 5rem; } }
+            width: 7rem;
+            height: 7rem; } }
 
 .manage__profile--nav {
   padding: 1rem;
