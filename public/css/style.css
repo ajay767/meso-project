@@ -1026,7 +1026,7 @@ body {
       padding: 0; } }
 
 .app__home {
-  width: max-content;
+  width: 61%;
   margin: 2rem auto; }
   @media only screen and (max-width: 75em) {
     .app__home {
@@ -1043,7 +1043,7 @@ body {
     flex-grow: 0; }
     @media only screen and (max-width: 56.25em) {
       .app__home__quick-branch {
-        padding: 1rem; } }
+        padding: 0rem; } }
     .app__home__quick-branch a {
       padding: 0 2rem;
       margin-right: .5rem;
@@ -1054,7 +1054,9 @@ body {
       align-items: center; }
       @media only screen and (max-width: 56.25em) {
         .app__home__quick-branch a {
-          padding: 0 1rem; } }
+          padding: 0 1rem; }
+          .app__home__quick-branch a:first-child {
+            padding: 0; } }
       .app__home__quick-branch a p {
         color: #108eea;
         margin-top: .5rem;
