@@ -2,6 +2,8 @@
 @import "abstracts/mixins.scss";
 @import "abstracts/animation";
 
+@import "layout/_swipper.scss";
+
 @import "layout/_footer.scss";
 @import "layout/_header.scss";
 
@@ -15,7 +17,9 @@
 @import "components/tab-header";
 @import "components/notification";
 @import "components/user-profile-card";
+@import "components/profile-card";
 @import "components/advertisment";
+@import "components/_doctor-profile.scss";
 
 @import "typography/typography";
 @import "base/base.scss";

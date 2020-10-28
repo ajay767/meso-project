@@ -4,111 +4,111 @@ block content
     .main__container
         .app__home
 
-            h1.primary__heading Sponsers
+            h2.block__heading Sponsers
             include components/advertisment-card
             .app__home__location
                 .app__home__location--gps
                     svg
                        use(xlink:href="src/img/icon-pack-2.svg#maps-and-flags")
-                    h1 Kolkata
+                    h1.regular__text Kolkata
                 form.app__home__location--manual#location-search-form
-                    input(type="text", placeholder="Location")#location-search-form-input
+                    input.regular__text(type="text", placeholder="Location")#location-search-form-input
                     button(type="submit")
                         svg.navigation__searchbar--input-link-btn
                             use(xlink:href="src/img/icon-pack-2.svg#search")
 
-            h1.primary__heading Top Specialities
+            h2.block__heading Top Specialities
             .app__home__quick-branch
+                a(href="/department/Ayurweda")
+                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
+                    p.card__caption Ayurweda
+                a(href="/department/Dentist")
+                    img(src="src/img/dentist.jpg", alt="Ayurwed department")
+                    p.card__caption Denstist
+                a(href="/department/Physician")
+                    img(src="src/img/doctor-dp.jpg", alt="Ayurwed department")
+                    p.card__caption Physician
+                a(href="/department/Neurologist")
+                    img(src="src/img/stretoscope.jpg", alt="Ayurwed department")
+                    p.card__caption Neurologist
+                a(href="/department/Child Doctor")
+                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
+                    p.card__caption Ayurweda
                 a(href="#")
                     img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
+                    p.card__caption Ayurweda
+                a(href="#")
+                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
+                    p.card__caption Ayurweda
+                a(href="#")
+                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
+                    p.card__caption Ayurweda
                 a(href="#")
                     img(src="src/img/dentist.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Denstist
+                    p.card__caption Denstist
                 a(href="#")
                     img(src="src/img/doctor-dp.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Physician
+                    p.card__caption Physician
                 a(href="#")
                     img(src="src/img/stretoscope.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Neurologist
+                    p.card__caption Neurologist
                 a(href="#")
                     img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
+                    p.card__caption Ayurweda
                 a(href="#")
                     img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
+                    p.card__caption Ayurweda
                 a(href="#")
                     img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
-                a(href="#")
-                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
-                a(href="#")
-                    img(src="src/img/dentist.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Denstist
-                a(href="#")
-                    img(src="src/img/doctor-dp.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Physician
-                a(href="#")
-                    img(src="src/img/stretoscope.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Neurologist
-                a(href="#")
-                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
-                a(href="#")
-                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
-                a(href="#")
-                    img(src="src/img/ayurwed.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Ayurweda
+                    p.card__caption Ayurweda
 
 
-            h1.primary__heading Top Doctors Near you
+            h2.block__heading Top Doctors Near you
             .app__home__quick-branch
                 a(href="/doctor/Dr soni yadav")
                     img(src="src/img/doctor1.jpg", alt="Ayurwed department")
-                    p.primary__paragraph.app__home__quick-branch--name-box Dr Soni yadav
+                    p.card__caption.app__home__quick-branch--name-box Dr Soni yadav
                 a(href="/doctor/Dr Vivek singh")
                     img(src="src/img/doctor2.jpg", alt="Ayurwed department")
-                    p.primary__paragraph.app__home__quick-branch--name-box  Dr Vivek singh
+                    p.card__caption.app__home__quick-branch--name-box  Dr Vivek singh
                 a(href="/doctor/Dr Pankaj gupta")
                     img(src="src/img/doctor3.jpg", alt="Ayurwed department")
-                    p.primary__paragraph.app__home__quick-branch--name-box  Dr Pankaj gupta
+                    p.card__caption.app__home__quick-branch--name-box  Dr Pankaj gupta
                 a(href="/doctor/Dr Shaurabh maurya")
                     img(src="src/img/doctor2.jpg", alt="Ayurwed department")
-                    p.primary__paragraph.app__home__quick-branch--name-box  Dr Shaurab maurya
+                    p.card__caption.app__home__quick-branch--name-box  Dr Shaurab maurya
                 a(href="/doctor/Dr Sunita yadav")
                     img(src="src/img/doctor1.jpg", alt="Ayurwed department")
-                    p.primary__paragraph.app__home__quick-branch--name-box  Dr Sunita yadav
+                    p.card__caption.app__home__quick-branch--name-box  Dr Sunita yadav
 
 
-            h1.primary__heading Top Hospitals Near you
+            h2.block__heading Top Hospitals Near you
             .app__home__quick-branch
                 a(href="#")
                     img(src="src/img/carsoul1.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Maruti Nandan
+                    p.card__caption Maruti Nandan
                 a(href="#")
                     img(src="src/img/carsoul2.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Gokila Ben
+                    p.card__caption Gokila Ben
                 a(href="#")
                     img(src="src/img/carsoul3.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Apollo
+                    p.card__caption Apollo
                 a(href="#")
                     img(src="src/img/carsoul4.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Lala lajpat Ray
+                    p.card__caption Lala lajpat Ray
 
-            h1.primary__heading Medical clinics Near you
+            h2.block__heading Medical clinics Near you
             .app__home__quick-branch
                 a(href="#")
                     img(src="src/img/carsoul1.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Maruti Nandan
+                    p.card__caption Maruti Nandan
                 a(href="#")
                     img(src="src/img/carsoul2.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Gokila Ben
+                    p.card__caption Gokila Ben
                 a(href="#")
                     img(src="src/img/carsoul3.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Apollo
+                    p.card__caption Apollo
                 a(href="#")
                     img(src="src/img/carsoul4.jpg", alt="Ayurwed department")
-                    p.primary__paragraph Lala lajpat Ray
+                    p.card__caption Lala lajpat Ray
                 

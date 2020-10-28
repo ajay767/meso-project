@@ -1,0 +1,30 @@
+extend tab-base
+
+block content
+        .app__home
+            .main__container
+                .doctor__profile
+                    .doctor__profile--bg
+                        img(src="src/img/ayurwed.jpg", alt="")
+                    .doctor__profile--card
+                        .doctor__profile--card-dp
+                            img(src="src/img/doctor-dp.jpg", alt="")
+                        h3.card__heading Dr Vivek singh
+                            svg#verified
+                                use(xlink:href="src/img/icon-pack-2.svg#check")
+                        p.card__caption Dentist 
+                        p.card__caption MBBS | MD , Apollo Hospitals
+                .appointment__section
+                    h2.regular__text Consultant Fee Rs. 600
+                    button.button__text Book Now
+                .block__heading.doctor__details Details
+                    ul.block__caption 
+                        li.block__content Lorem ipsum dolor sit.
+                        li.block__content Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        li.block__content Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ex!
+                .rating__section
+                    h2.block__heading Reviews
+                    div
+                        h4.block__content overall 4.8
+                         
+                        include components/_rating-card

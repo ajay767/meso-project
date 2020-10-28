@@ -1,0 +1,98 @@
+.people__card {
+    width: 51rem;
+
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+
+    @include respond(tab-land) {
+
+        width: 51rem;
+
+    }
+
+    @include respond(phone) {
+        margin: 1rem auto;
+
+        width: 96%;
+
+    }
+
+    &-dp {
+        margin-right: 1rem;
+        grid-row: 1/-1;
+        grid-column: 1/2;
+        position: relative;
+        width: max-content;
+
+        & img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+
+            @include respond(tab-land) {
+                height: 6.5rem;
+                width: 6.5rem;
+            }
+
+            @include respond(tab-port) {
+                height: 6rem;
+                width: 6rem;
+            }
+
+            @include respond(tab-phone) {
+                height: 5.5rem;
+                width: 5.5rem;
+            }
+        }
+
+        &--rating {
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-align: center;
+            border-radius: .3rem;
+            position: absolute;
+            bottom: .2rem;
+            width: 4rem;
+            right: 0;
+            left: 0;
+            padding: .4rem;
+            color: $color-gray;
+            background-color: orange;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    & h3 {
+        display: flex;
+        grid-column: 2/5;
+        grid-row: 1/2;
+    }
+
+    & p {
+        grid-column: 2/5;
+        grid-row: 2/3;
+    }
+
+
+    &--info {
+
+
+        &-experience {
+            justify-self: start;
+            grid-area: 3/2/4/5;
+        }
+
+        &-department {
+            justify-self: end;
+            grid-area: 3/2/4/5;
+        }
+    }
+}

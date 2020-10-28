@@ -8,8 +8,8 @@
         flex-direction: column;
 
         &--content {
-            width: 75%;
             font-size: 5rem;
+            width: 75%;
             line-height: 2rem;
             color: $color-gray-light;
             text-align: center;
@@ -31,8 +31,6 @@
 
         &--author-name {
             display: block;
-            font-size: 1.8rem;
-            font-weight: 600;
         }
     }
 }

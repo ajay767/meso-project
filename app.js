@@ -47,6 +47,30 @@ app.get('/me', (req, res) => {
   });
 });
 
+app.get('/doctor/:docID', (req, res) => {
+  const docID = req.params.docID;
+  const currDoctor = {
+    name: 'Dr Vivek singh',
+    experience: 4,
+    category: 'Dentist',
+    fee: 499,
+    isVerifies: true,
+    education: 'MBBS, MD Apollo hospitals',
+    patientConsulted: 5786
+  };
+  res.render('doctor-profile.pug', {
+    userID: `AIR group | ${docID}`,
+    pageName: `${currDoctor.name}| ${currDoctor.category}`
+  });
+});
+
+app.get('/department/:department', (req, res) => {
+  const departmentName = req.params.department;
+  res.render('department-search.pug', {
+    pageID: `AIR| best ${departmentName} doctors near you`,
+    pageName: departmentName
+  });
+});
 app.get('/doctor/:drName', (req, res) => {
   const drName = req.params.drName;
   res.render('user-profile.pug', {
