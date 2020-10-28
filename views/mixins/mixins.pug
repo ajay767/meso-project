@@ -13,7 +13,7 @@ mixin peopleCard(doctorData)
         .people__card-dp
             -var profileImage = `src/img/${doctorData.displayProfile}`;
             img(src=profileImage, alt=`${doctorData.name}`)
-            span.people__card-dp--rating= doctorData.rating
+            span.people__card-dp--rating= `${doctorData.rating}/5`
         h3.card__heading= doctorData.name
             svg#verified
                 use(xlink:href="src/img/icon-pack-2.svg#checked")

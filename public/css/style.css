@@ -954,7 +954,7 @@ footer {
           height: 6rem;
           width: 6rem; } }
     .people__card-dp--rating {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 2px;
       font-weight: 600;
       text-align: center;
@@ -964,7 +964,7 @@ footer {
       width: 4rem;
       right: 0;
       left: 0;
-      padding: .4rem;
+      padding: .311rem;
       color: #444343;
       background-color: orange;
       margin-right: auto;
