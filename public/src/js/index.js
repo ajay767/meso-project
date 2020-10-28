@@ -27,16 +27,18 @@ if (document.querySelector('.goBackButton')) goToPreviousPage();
 
 if (document.querySelector('.reviews.slider')) reviewSlider();
 
-if (document.querySelectorAll('.landing__slider--item').length !== 0)
+if (document.querySelectorAll('.landing__slider--item').length !== 0) {
   landingSlider();
-
-document
-  .querySelector('#location-search-form')
-  .addEventListener('submit', e => {
-    const query = document.querySelector('#location-search-form-input').value;
-    alert(query);
-    navigator.geolocation.getCurrentPosition(position => {});
-    e.preventDefault();
-  });
-
+}
 navbarToggler();
+
+if (document.querySelector('#location-search-form')) {
+  document
+    .querySelector('#location-search-form')
+    .addEventListener('submit', e => {
+      const query = document.querySelector('#location-search-form-input').value;
+      alert(query);
+      navigator.geolocation.getCurrentPosition(position => {});
+      e.preventDefault();
+    });
+}

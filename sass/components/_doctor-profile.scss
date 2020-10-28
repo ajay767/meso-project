@@ -4,7 +4,22 @@
 
     &--bg {
         width: 100%;
-        height: 10rem;
+        height: 28rem;
+
+        @include respond(tab-land) {
+            height: 25rem;
+
+        }
+
+        @include respond(tab-port) {
+            height: 20rem;
+
+        }
+
+        @include respond(phone) {
+            height: 16rem;
+
+        }
 
         & img {
             object-fit: cover;
@@ -72,7 +87,7 @@
         border: none;
         font-weight: 300;
         margin-left: 2rem;
-        background-color: $color-gray;
+        background-color: $color-black;
         color: $color-light;
         border-radius: 3px;
     }

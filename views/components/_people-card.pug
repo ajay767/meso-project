@@ -1,10 +1,11 @@
 a(href="/doctor/45115eerf552").people__card
     .people__card-dp
         img(src="src/img/doctor-dp.jpg", alt="")
-        span.people__card-dp--rating 4/5
-    h3.card__heading Dr vivek oberoi
+        span.people__card-dp--rating= drRating
+    h3.card__heading= drName
         svg#verified
-            use(xlink:href="src/img/icon-pack-2.svg#check")
-    p.card__caption Lorem ipsum dolor sit amet.
-    span.card__paragraph.people__card--info-experience 4 yr experience
-    span.card__paragraph.people__card--info-department General physician
+            use(xlink:href="src/img/icon-pack-2.svg#checked")
+    p.card__caption= drDescription
+    -var experience = `${drExperience} yr experience`;
+    span.card__paragraph.people__card--info-experience= experience
+    span.card__paragraph.people__card--info-department= drDepartment

@@ -447,14 +447,21 @@ var goToPreviousPage = function goToPreviousPage() {
 
 if (document.querySelector('.goBackButton')) goToPreviousPage();
 if (document.querySelector('.reviews.slider')) (0, _reviewSlider.reviewSlider)();
-if (document.querySelectorAll('.landing__slider--item').length !== 0) (0, _landing_slider.landingSlider)();
-document.querySelector('#location-search-form').addEventListener('submit', function (e) {
-  var query = document.querySelector('#location-search-form-input').value;
-  alert(query);
-  navigator.geolocation.getCurrentPosition(function (position) {});
-  e.preventDefault();
-});
+
+if (document.querySelectorAll('.landing__slider--item').length !== 0) {
+  (0, _landing_slider.landingSlider)();
+}
+
 (0, _navbarToggler.navbarToggler)();
+
+if (document.querySelector('#location-search-form')) {
+  document.querySelector('#location-search-form').addEventListener('submit', function (e) {
+    var query = document.querySelector('#location-search-form-input').value;
+    alert(query);
+    navigator.geolocation.getCurrentPosition(function (position) {});
+    e.preventDefault();
+  });
+}
 },{"./alert":"alert.js","./navbarToggler":"navbarToggler.js","./landing_slider.js":"landing_slider.js","./reviewSlider":"reviewSlider.js","./getLocation":"getLocation.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -483,7 +490,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50258" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,0 +1,23 @@
+mixin ratingCard(ratingData)
+    .rating__card
+        -var img=`src/img/${ratingData.displayProfile}`;
+        img.rating__card--author-profile(src=img, alt="user")
+        h5.card__heading.rating__card--author= ratingData.author
+        h5.card__caption.rating__card--rating-number= ratingData.ratingValue
+            svg
+                use(xlink:href="src/img/icon-pack-2.svg#star")
+        p.card__paragraph.rating__card--rating-content= ratingData.rating
+
+mixin peopleCard(doctorData)
+    a(href="/doctor/45115eerf552").people__card
+        .people__card-dp
+            -var profileImage = `src/img/${doctorData.displayProfile}`;
+            img(src=profileImage, alt=`${doctorData.name}`)
+            span.people__card-dp--rating= doctorData.rating
+        h3.card__heading= doctorData.name
+            svg#verified
+                use(xlink:href="src/img/icon-pack-2.svg#checked")
+        p.card__caption= doctorData.description
+        -var experience = `${doctorData.experience} yr experience`;
+        span.card__paragraph.people__card--info-experience= experience
+        span.card__paragraph.people__card--info-department= doctorData.department

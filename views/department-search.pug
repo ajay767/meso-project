@@ -3,8 +3,6 @@ extends tab-base
 block content
     .main__container
       
-            include components/_people-card
-            include components/_people-card
-            include components/_people-card
-            include components/_people-card
+        each val, index in doctorData
+            +peopleCard(doctorData[index])
             
