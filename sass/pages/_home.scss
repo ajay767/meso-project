@@ -75,10 +75,7 @@
 
                 }
 
-                @include respond(phone) {
-                    // height: 3rem;
-
-                }
+                @include respond(phone) {}
 
                 & svg {
 
@@ -93,20 +90,15 @@
 
     &__quick-branch {
         margin: 2rem auto;
-        // display: flex;
-        // justify-content: center;
-        // justify-content: flex-start;
+
         overflow-x: hidden;
-        // flex-wrap: nowrap;
-        // flex-shrink: 0;
-        // flex-grow: 0;
+
 
         &--placeholder {
             width: 4rem;
             height: 4rem;
             position: absolute;
             top: 10px;
-
             fill: red;
             margin: auto;
             margin-right: auto;
@@ -116,11 +108,6 @@
         @include respond(tab-port) {
             padding: 1rem 0rem;
             border-bottom: 1px solid $color-gray-light;
-            // border-top: 1px solid $color-gray;
-        }
-
-        &--name-box {
-            height: 4rem;
 
         }
 

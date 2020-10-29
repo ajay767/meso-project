@@ -1189,21 +1189,21 @@ p {
   font-size: 1.8rem; }
 
 .card__heading {
-  font-size: 2.3rem;
-  font-weight: 400; }
-  @media only screen and (max-width: 37.5em) {
-    .card__heading {
-      font-size: 2rem; } }
-
-.card__caption {
   font-size: 2rem;
   font-weight: 400; }
   @media only screen and (max-width: 37.5em) {
+    .card__heading {
+      font-size: 1.7rem; } }
+
+.card__caption {
+  font-size: 1.7rem;
+  font-weight: 400; }
+  @media only screen and (max-width: 37.5em) {
     .card__caption {
-      font-size: 1.8rem; } }
+      font-size: 1.5rem; } }
 
 .card__paragraph {
-  font-size: 1.8rem; }
+  font-size: 1.5rem; }
 
 .feature__heading {
   font-size: 2rem; }
@@ -1330,8 +1330,6 @@ body {
       .app__home__quick-branch {
         padding: 1rem 0rem;
         border-bottom: 1px solid #a7a6a6; } }
-    .app__home__quick-branch--name-box {
-      height: 4rem; }
     .app__home__quick-branch .swiper-wrapper a {
       width: max-content;
       position: relative;
