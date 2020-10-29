@@ -93,13 +93,13 @@
 
     &__quick-branch {
         margin: 2rem auto;
-        display: flex;
-        justify-content: center;
-        justify-content: flex-start;
-        overflow-x: scroll;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        flex-grow: 0;
+        // display: flex;
+        // justify-content: center;
+        // justify-content: flex-start;
+        overflow-x: hidden;
+        // flex-wrap: nowrap;
+        // flex-shrink: 0;
+        // flex-grow: 0;
 
         &--placeholder {
             width: 4rem;
@@ -124,7 +124,8 @@
 
         }
 
-        & a {
+        & .swiper-wrapper a {
+            width: 12.5rem;
             position: relative;
             padding: 0 2rem;
             margin-right: .5rem;

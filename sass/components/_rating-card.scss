@@ -1,6 +1,6 @@
 .rating__section {
     border-bottom: 1px solid $color-gray-light;
-    margin: 1rem 0;
+    margin: 1rem;
 
     &__overall {
         display: flex;
@@ -18,12 +18,12 @@
     margin: 1rem 0;
     padding: 1rem 0;
     display: grid;
-    grid-template-columns: 4.5rem repeat(3, 1fr);
-    grid-template-rows: repeat(4, .5fr);
+    grid-template-columns: 6rem repeat(3, 1fr);
+    grid-template-rows: repeat(4, .6fr);
 
     & img {
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
         border-radius: 50%;
     }
 
@@ -40,6 +40,7 @@
 
     &--rating-number {
         display: flex;
+        align-items: center;
         grid-row: 2/3;
         grid-column: 2/-1
     }

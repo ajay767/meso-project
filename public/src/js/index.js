@@ -3,6 +3,7 @@ import { navbarToggler } from './navbarToggler';
 import { landingSlider } from './landing_slider.js';
 import { reviewSlider } from './reviewSlider';
 import { getCurrentLocation } from './getLocation';
+import { swiper } from './swiper';
 
 getCurrentLocation();
 

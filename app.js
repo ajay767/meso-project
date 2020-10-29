@@ -183,6 +183,10 @@ app.get('/notification', (req, res) => {
   });
 });
 
+app.get('/font-check', (req, res) => {
+  res.render('font.pug');
+});
+
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/employee', employeeRoute);
 

@@ -1,4 +1,31 @@
 .swiper-container {
-    width: 600px;
-    height: 300px;
+    width: auto;
+    height: auto;
+}
+
+.swiper-container-sponser {
+    width: 100%;
+    height: 100%;
+
+    &.swiper-wrapper {
+        padding-left: 0;
+
+    }
+
+    & .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+.swiper-button-prev-1,
+.swiper-button-next-1,
+.swiper-button-prev-2,
+.swiper-button-next-2 {
+    @include respond(phone) {
+        display: none;
+    }
 }

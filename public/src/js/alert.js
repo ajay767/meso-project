@@ -13,9 +13,9 @@ function hideAlert() {
 }
 
 export const showAlert = (alertType, alertMsg) => {
-  const warningMarkup = `<div class="alert__box alert__warning"><svg><use xlink:href="src/img/icon-pack-2.svg#danger"></use></svg><p class="primary__heading">MESSAGE</p></div>`;
-  const successMarkup = `<div class="alert__box alert__success"><svg><use xlink:href="src/img/icon-pack-2.svg#happy"></use></svg><p class="primary__heading">MESSAGE</p></div>`;
-  const errorMarkup = `<div class="alert__box alert__error"><svg><use xlink:href="src/img/icon-pack-2.svg#sad"></use></svg><p class="primary__heading">MESSAGE</p></div>`;
+  const warningMarkup = `<div class="alert__box alert__warning"><svg><use xlink:href="src/img/icon-pack-2.svg#danger"></use></svg><p class="alert__text">MESSAGE</p></div>`;
+  const successMarkup = `<div class="alert__box alert__success"><svg><use xlink:href="src/img/icon-pack-2.svg#happy"></use></svg><p class="alert__text">MESSAGE</p></div>`;
+  const errorMarkup = `<div class="alert__box alert__error"><svg><use xlink:href="src/img/icon-pack-2.svg#sad"></use></svg><p class="alert__text">MESSAGE</p></div>`;
 
   alertType === 'success'
     ? alertDesign(successMarkup, alertMsg)

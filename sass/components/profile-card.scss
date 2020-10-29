@@ -7,7 +7,6 @@
     padding: 1.5rem;
     display: grid;
     grid-template-columns: max-content repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     align-items: center;
 
     @include respond(tab-land) {
@@ -24,10 +23,11 @@
     }
 
     &-dp {
-        margin-right: 1rem;
-        grid-row: 1/-1;
+        margin: 0rem 1rem 0 0;
+        grid-row: 1/4;
         grid-column: 1/2;
         position: relative;
+        align-self: start;
         width: max-content;
 
         & img {
@@ -58,7 +58,7 @@
             text-align: center;
             border-radius: .3rem;
             position: absolute;
-            bottom: .2rem;
+            bottom: 0rem;
             width: 4rem;
             right: 0;
             left: 0;
@@ -72,6 +72,7 @@
 
     & h3 {
         display: flex;
+        align-items: center;
         grid-column: 2/5;
         grid-row: 1/2;
     }
