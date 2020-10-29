@@ -166,9 +166,15 @@ var navbarToggler = function navbarToggler() {
   var sideBar = document.querySelector('.sidebar');
   navOpen.addEventListener('click', function (e) {
     sideBar.classList.add('active');
+    var main_body = document.querySelector('body');
+    main_body.style.pointerEvents = 'none';
+    main_body.style.overflowY = 'hidden';
   });
   navClose.addEventListener('click', function (e) {
     sideBar.classList.remove('active');
+    var main_body = document.querySelector('body');
+    main_body.style.pointerEvents = 'auto';
+    main_body.style.overflowY = 'scroll';
   });
 };
 

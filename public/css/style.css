@@ -925,14 +925,17 @@ footer {
   .notification__container--card:not(:nth-child(1)) {
     margin: 0; }
   .notification__container--card a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #108eea; }
+    display: grid;
+    grid-auto-columns: max-content 1fr;
+    color: #108eea;
+    text-decoration: none; }
     .notification__container--card a svg {
       width: 3rem;
       height: 3rem;
-      margin-right: 2rem; }
+      margin-right: 2rem;
+      grid-column: 1/2; }
+    .notification__container--card a p {
+      grid-column: 2/3; }
 
 .people__card {
   width: 51rem;

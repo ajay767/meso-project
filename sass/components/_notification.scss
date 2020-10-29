@@ -13,15 +13,20 @@
 
 
         & a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
+            display: grid;
+            grid-auto-columns: max-content 1fr;
             color: $color-primary;
+            text-decoration: none;
 
             & svg {
                 width: 3rem;
                 height: 3rem;
                 margin-right: 2rem;
+                grid-column: 1/2;
+            }
+
+            & p {
+                grid-column: 2/3;
             }
         }
     }

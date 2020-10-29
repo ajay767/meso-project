@@ -5,10 +5,16 @@ export const navbarToggler = function() {
 
   navOpen.addEventListener('click', e => {
     sideBar.classList.add('active');
+    const main_body = document.querySelector('body');
+    main_body.style.pointerEvents = 'none';
+    main_body.style.overflowY = 'hidden';
   });
 
   navClose.addEventListener('click', e => {
     sideBar.classList.remove('active');
+    const main_body = document.querySelector('body');
+    main_body.style.pointerEvents = 'auto';
+    main_body.style.overflowY = 'scroll';
   });
 };
 
