@@ -38,8 +38,8 @@ const mySwiper = new Swiper('.swiper-container-1', {
     el: '.swiper-pagination'
   },
   // slideClass: '.swiper-slide',
-  slidesPerView: 5,
-  spaceBetween: 5,
+  slidesPerView: 'auto',
+  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-1',
     clickable: true
@@ -61,8 +61,8 @@ const mySwiper2 = new Swiper('.swiper-container-2', {
   //   el: '.swiper-pagination'
   // slideClass: '.swiper-slide-2',
   // },
-  slidesPerView: 5,
-  spaceBetween: 5,
+  slidesPerView: 'auto',
+  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-2',
     clickable: true
@@ -75,7 +75,7 @@ const mySwiper2 = new Swiper('.swiper-container-2', {
 });
 const mySwiper3 = new Swiper('.swiper-container-3', {
   loop: false,
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   pagination: {
     el: '.swiper-pagination-3',
     clickable: true
@@ -95,8 +95,8 @@ const mySwiper4 = new Swiper('.swiper-container-4', {
   //   el: '.swiper-pagination'
   // slideClass: '.swiper-slide-2',
   // },
-  slidesPerView: 5,
-  spaceBetween: 5,
+  slidesPerView: 'auto',
+  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-4',
     clickable: true

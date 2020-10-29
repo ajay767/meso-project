@@ -918,8 +918,7 @@ footer {
     align-self: center; }
 
 .notification__container--card {
-  border-top: 1px solid #474747;
-  border-bottom: 1px solid #474747;
+  border-bottom: .4px solid #dbdbdb;
   list-style: none;
   padding: 1rem;
   margin: .3rem 0 0; }
@@ -939,17 +938,18 @@ footer {
   width: 51rem;
   text-decoration: none;
   color: black;
-  margin: 1rem;
+  margin: 0rem;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: max-content repeat(3, 1fr);
-  align-items: center; }
+  align-items: center;
+  border-bottom: .4px solid #dbdbdb; }
   @media only screen and (max-width: 75em) {
     .people__card {
       width: 51rem; } }
   @media only screen and (max-width: 37.5em) {
     .people__card {
-      margin: 1rem auto;
+      margin: 0 auto;
       width: 96%; } }
   .people__card-dp {
     margin: 0rem 1rem 0 0;
@@ -1006,7 +1006,11 @@ footer {
   .advertisment__container--card a {
     display: flex;
     text-decoration: none; }
+    @media only screen and (max-width: 56.25em) {
+      .advertisment__container--card a {
+        height: 15rem; } }
     .advertisment__container--card a img {
+      object-fit: cover;
       width: 100%;
       height: 100%;
       border-radius: 3px; }
@@ -1329,7 +1333,7 @@ body {
     .app__home__quick-branch--name-box {
       height: 4rem; }
     .app__home__quick-branch .swiper-wrapper a {
-      width: 12.5rem;
+      width: max-content;
       position: relative;
       padding: 0 2rem;
       margin-right: .5rem;
@@ -1340,9 +1344,7 @@ body {
       align-items: center; }
       @media only screen and (max-width: 56.25em) {
         .app__home__quick-branch .swiper-wrapper a {
-          padding: 0 1rem; }
-          .app__home__quick-branch .swiper-wrapper a:first-child {
-            padding: 0; } }
+          padding: 0 1rem; } }
       .app__home__quick-branch .swiper-wrapper a p {
         color: #108eea;
         margin-top: .5rem;

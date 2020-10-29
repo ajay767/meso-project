@@ -1,7 +1,7 @@
 .notification__container {
     &--card {
-        border-top: 1px solid rgb(71, 71, 71);
-        border-bottom: 1px solid rgb(71, 71, 71);
+        border-bottom: .4px solid #dbdbdb;
+
         list-style: none;
         padding: $padding-sm;
         margin: .3rem 0 0;

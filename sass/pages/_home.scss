@@ -125,7 +125,7 @@
         }
 
         & .swiper-wrapper a {
-            width: 12.5rem;
+            width: max-content;
             position: relative;
             padding: 0 2rem;
             margin-right: .5rem;
@@ -137,13 +137,7 @@
 
             @include respond(tab-port) {
                 padding: 0 1rem;
-
-                &:first-child {
-                    padding: 0;
-                }
             }
-
-
 
             & p {
                 color: $color-primary;

@@ -12235,8 +12235,7 @@ var mySwiper = new _swiper.default('.swiper-container-1', (_Swiper = {
     el: '.swiper-pagination'
   },
   // slideClass: '.swiper-slide',
-  slidesPerView: 5,
-  spaceBetween: 5
+  slidesPerView: 'auto'
 }, _defineProperty(_Swiper, "pagination", {
   el: '.swiper-pagination-1',
   clickable: true
@@ -12253,8 +12252,8 @@ var mySwiper2 = new _swiper.default('.swiper-container-2', {
   //   el: '.swiper-pagination'
   // slideClass: '.swiper-slide-2',
   // },
-  slidesPerView: 5,
-  spaceBetween: 5,
+  slidesPerView: 'auto',
+  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-2',
     clickable: true
@@ -12267,7 +12266,7 @@ var mySwiper2 = new _swiper.default('.swiper-container-2', {
 });
 var mySwiper3 = new _swiper.default('.swiper-container-3', {
   loop: false,
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   pagination: {
     el: '.swiper-pagination-3',
     clickable: true
@@ -12286,8 +12285,8 @@ var mySwiper4 = new _swiper.default('.swiper-container-4', {
   //   el: '.swiper-pagination'
   // slideClass: '.swiper-slide-2',
   // },
-  slidesPerView: 5,
-  spaceBetween: 5,
+  slidesPerView: 'auto',
+  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-4',
     clickable: true

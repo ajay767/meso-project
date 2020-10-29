@@ -3,11 +3,12 @@
 
     text-decoration: none;
     color: black;
-    margin: 1rem;
+    margin: 0rem;
     padding: 1.5rem;
     display: grid;
     grid-template-columns: max-content repeat(3, 1fr);
     align-items: center;
+    border-bottom: .4px solid #dbdbdb;
 
     @include respond(tab-land) {
 
@@ -16,7 +17,7 @@
     }
 
     @include respond(phone) {
-        margin: 1rem auto;
+        margin: 0 auto;
 
         width: 96%;
 
