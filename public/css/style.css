@@ -60,7 +60,12 @@ footer {
 
 .navigation {
   z-index: 10;
-  background-color: #108eea;
+  background: #396afc;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2948ff, #396afc);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2948ff, #396afc);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #493c3c;
   position: sticky;
   top: 0;
@@ -566,7 +571,7 @@ footer {
   .sidebar__list {
     padding: 1rem; }
     .sidebar__list--item {
-      color: #108eea;
+      color: #396afc;
       padding: 8px 8px 8px 11px;
       width: 26rem;
       margin: 1rem 0;
@@ -790,7 +795,7 @@ footer {
     height: 4rem;
     border-radius: 3px;
     border: none;
-    background: #108eea;
+    background: #396afc;
     cursor: pointer;
     font-weight: 300;
     outline: none; }
@@ -827,7 +832,7 @@ footer {
   .account__form--signup--bg {
     width: 100%;
     padding: 1rem;
-    background-color: #108eea;
+    background-color: #396afc;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; }
@@ -866,7 +871,7 @@ footer {
     padding: 1rem;
     padding-left: 2rem;
     border: none;
-    border-bottom: 2px solid #108eea;
+    border-bottom: 2px solid #396afc;
     font-size: 1.5rem;
     display: block;
     width: 43%;
@@ -895,7 +900,7 @@ footer {
   right: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #108eea;
+  background-color: #396afc;
   padding: 1rem; }
   .page__header--icon-box {
     grid-column: 1/2;
@@ -927,7 +932,7 @@ footer {
   .notification__container--card a {
     display: grid;
     grid-auto-columns: max-content 1fr;
-    color: #108eea;
+    color: #396afc;
     text-decoration: none; }
     .notification__container--card a svg {
       width: 3rem;
@@ -1276,7 +1281,7 @@ body {
         margin-right: 1rem;
         width: 2.5rem;
         height: 2.5rem;
-        fill: #108eea; }
+        fill: #396afc; }
     .app__home__location--manual {
       display: flex; }
       .app__home__location--manual input {
@@ -1346,7 +1351,7 @@ body {
         .app__home__quick-branch .swiper-wrapper a {
           padding: 0 1rem; } }
       .app__home__quick-branch .swiper-wrapper a p {
-        color: #108eea;
+        color: #396afc;
         margin-top: .5rem;
         text-align: center; }
       .app__home__quick-branch .swiper-wrapper a img {
