@@ -12201,20 +12201,16 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// configure Swiper to use modules
-_swiper.default.use([_swiper.Navigation, _swiper.Pagination]); // init Swiper:
+_swiper.default.use([_swiper.Navigation, _swiper.Pagination]);
 
-
+var swiper = new _swiper.default('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 var mySponsers = new _swiper.default('.swiper-container-sponser', {
-  // Optional parameters
-  // direction: 'horizontal',
-  loop: false,
-  // spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true
@@ -12224,17 +12220,12 @@ var mySponsers = new _swiper.default('.swiper-container-sponser', {
     nextEl: '.swiper-button-next-sponser',
     prevEl: '.swiper-button-prev-sponser'
   }
-}); // init Swiper:
-
+});
 var mySwiper = new _swiper.default('.swiper-container-1', (_Swiper = {
-  // Optional parameters
-  // direction: 'horizontal',
   loop: false,
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination'
   },
-  // slideClass: '.swiper-slide',
   slidesPerView: 'auto'
 }, _defineProperty(_Swiper, "pagination", {
   el: '.swiper-pagination-1',
@@ -12244,21 +12235,12 @@ var mySwiper = new _swiper.default('.swiper-container-1', (_Swiper = {
   prevEl: '.swiper-button-prev-1'
 }), _Swiper));
 var mySwiper2 = new _swiper.default('.swiper-container-2', {
-  // Optional parameters
-  // direction: 'horizontal',
   loop: false,
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination'
-  // slideClass: '.swiper-slide-2',
-  // },
   slidesPerView: 'auto',
-  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-2',
     clickable: true
   },
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next-2',
     prevEl: '.swiper-button-prev-2'
@@ -12277,21 +12259,12 @@ var mySwiper3 = new _swiper.default('.swiper-container-3', {
   }
 });
 var mySwiper4 = new _swiper.default('.swiper-container-4', {
-  // Optional parameters
-  // direction: 'horizontal',
   loop: false,
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination'
-  // slideClass: '.swiper-slide-2',
-  // },
   slidesPerView: 'auto',
-  // spaceBetween: 5,
   pagination: {
     el: '.swiper-pagination-4',
     clickable: true
   },
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next-4',
     prevEl: '.swiper-button-prev-4'

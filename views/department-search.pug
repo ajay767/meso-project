@@ -2,7 +2,7 @@ extends tab-base
 
 block content
     .main__container
-      
-        each val, index in doctorData
-            +peopleCard(doctorData[index])
+        .app__home
+            each val, index in doctorData
+                +peopleCard(doctorData[index])
             

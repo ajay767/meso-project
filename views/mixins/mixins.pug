@@ -1,5 +1,5 @@
 mixin ratingCard(ratingData)
-    .rating__card
+    .rating__card.border-bottom-light
         -var img=`src/img/${ratingData.displayProfile}`;
         img.rating__card--author-profile(src=img, alt="user")
         h5.card__heading.rating__card--author= ratingData.author

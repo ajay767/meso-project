@@ -1092,7 +1092,6 @@ footer {
       margin-left: 1rem; }
 
 .rating__card {
-  margin: 1rem 0;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 6rem repeat(3, 1fr);
@@ -1226,6 +1225,9 @@ p {
   height: 1.8rem;
   width: 1.8rem;
   fill: #0b8d0b; }
+
+.border-bottom-light {
+  border-bottom: .4px solid #dbdbdb; }
 
 html {
   font-size: 62.5%;
