@@ -19,7 +19,7 @@
     padding: 1rem 0;
     display: grid;
     grid-template-columns: 6rem repeat(3, 1fr);
-    grid-template-rows: repeat(4, .6fr);
+    // grid-template-rows: repeat(4, .6fr);
 
     & img {
         width: 5rem;
@@ -34,19 +34,19 @@
     }
 
     &--author {
-        grid-row: 1/2;
+        // grid-row: 1/2;
         grid-column: 2/-1
     }
 
     &--rating-number {
         display: flex;
         align-items: center;
-        grid-row: 2/3;
+        // grid-row: 2/3;
         grid-column: 2/-1
     }
 
     &--rating-content {
-        grid-row: 3/-1;
+        // grid-row: 3/-1;
         grid-column: 1/-1;
     }
 
