@@ -1306,6 +1306,14 @@ p {
 .border-bottom-light {
   border-bottom: .4px solid #dbdbdb; }
 
+.app__home__test {
+  margin: 0 1rem;
+  display: flex; }
+
+.doctors__list {
+  display: flex;
+  flex-direction: column; }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
@@ -1333,7 +1341,7 @@ body {
 
 .app__home {
   width: 61%;
-  margin: 2rem auto; }
+  margin: 0rem auto; }
   @media only screen and (max-width: 75em) {
     .app__home {
       width: auto;

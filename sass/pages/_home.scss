@@ -1,6 +1,7 @@
 .app__home {
     width: 61%;
-    margin: 2rem auto;
+    // margin: 0 1rem;
+    margin: 0rem auto;
 
     @include respond(tab-land) {
         width: auto;

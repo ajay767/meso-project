@@ -4,6 +4,8 @@ const router = express.Router();
 
 router.route('/').get(viewController.getHomePage);
 
+router.route('/test').get(viewController.test);
+
 router.get('/login', (req, res) => {
   res.render('login.pug');
 });

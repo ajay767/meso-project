@@ -1,11 +1,15 @@
-extend tab-base
+extends ../tab-base
 
 block content
-        .app__home
-            .main__container
+    .main__container
+        .app__home__test   
+            .doctors__list        
+                each val, index in doctorData
+                    +peopleCard(doctorData[index])
+            .doctor-profile-container
                 .doctor__profile
                     .doctor__profile--bg
-                        img(src="src/img/Mirzapur.jpg", alt="")
+                        img(src="src/img/mirzapur.jpg", alt="")
                     .doctor__profile--card
                         .doctor__profile--card-dp
                             img(src="src/img/bablu.jpg", alt="")
@@ -30,4 +34,4 @@ block content
                     //-         use(xlink:href="src/img/icon-pack-2.svg#star")
                     each val, index in ratingData
                         +ratingCard(ratingData[index])
-                   
+            
