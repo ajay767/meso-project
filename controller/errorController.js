@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const AppError = require('./../utlis/appError');
+const AppError = require('./../utils/appError');
 
 const handleCastErrorDB = err => {
   const message = `invalid ${err.path} : ${err.value}`;

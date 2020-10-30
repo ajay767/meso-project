@@ -1,5 +1,5 @@
 const employee = require('./../models/employeeModel');
-const catchAsync = require('./../utlis/catchAsync');
+const catchAsync = require('./../utils/catchAsync');
 
 exports.postNewUser = catchAsync(async (req, res, next) => {
   const newEmployee = await employee.create(req.body);
