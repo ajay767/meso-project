@@ -13,12 +13,13 @@ html(lang="en")
         title Meso| All you need is here.
         
     body.no-scroll
-        .loader__container
-            include components/loader
+        //- .loader__container
+        //-     include components/loader
         //- -----navbar-----
         include components/_header
         include components/_sidebar
-
+        .loader__container
+            include components/loader
         block content
 
         //-----footer-----
