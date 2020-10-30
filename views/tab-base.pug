@@ -7,11 +7,14 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="shortcut icon", href="src/img/logo-primary.jpg", type="image/x-icon")
         link(rel="stylesheet", href="css/style.css")
+        script(defer src="src/js/loader-animation.js")
         script(defer src="src/js/bundle.js")
         -var PageId;
         title= PageId
 
-    body
+    body.no-scroll
+        .loader__container
+            include components/loader
         //----navbar header for tab page (notification,messages,profile)
         include components/_tab-header
         include components/_sidebar

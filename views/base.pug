@@ -7,13 +7,14 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.css")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        script(defer src="src/js/loader-animation.js")
         script(defer src="src/js/bundle.js")
         script(defer scr="src/js/swiper.js")
-        
         title Meso| All you need is here.
-    body
-
         
+    body.no-scroll
+        .loader__container
+            include components/loader
         //- -----navbar-----
         include components/_header
         include components/_sidebar
