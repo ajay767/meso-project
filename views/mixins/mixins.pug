@@ -21,3 +21,10 @@ mixin peopleCard(doctorData)
         -var experience = `${doctorData.experience} yr experience`;
         span.card__paragraph.people__card--info-experience= experience
         span.card__paragraph.people__card--info-department= doctorData.department
+
+mixin searchForm()
+    form.navigation__searchbar
+        input(type="text", placeholder="search", name="searchQuery").navigation__searchbar--input.button__text
+        button(type="submit").navigation__searchbar--input-link
+            svg.navigation__searchbar--input-link-btn
+                use(xlink:href="src/img/icon-pack-2.svg#search")

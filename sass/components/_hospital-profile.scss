@@ -1,0 +1,19 @@
+.department--block {
+    display: flex;
+    flex-wrap: wrap;
+
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        flex-direction: column;
+        margin: 1rem;
+
+        & img {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+        }
+    }
+}

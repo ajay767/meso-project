@@ -125,7 +125,7 @@ exports.getDepartment = (req, res) => {
     }
   ];
   res.render('department-search.pug', {
-    pageID: `AIR| best ${departmentName} doctors near you`,
+    pageId: `AIR| best ${departmentName} doctors near you`,
     pageName: departmentName,
     doctorData
   });
@@ -231,5 +231,14 @@ exports.test = (req, res) => {
     pageName: 'testing',
     doctorData,
     ratingData
+  });
+};
+
+exports.getHospital = (req, res) => {
+  const PageID = req.params.hospitalName;
+  const PageName = req.params.hospitalName;
+  res.render('hospital-profile.pug', {
+    PageId: `AIR | ${PageID}`,
+    pageName: PageName
   });
 };

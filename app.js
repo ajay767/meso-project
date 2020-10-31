@@ -4,7 +4,7 @@ const pug = require('pug');
 
 const employeeRoute = require('./routes/employeeRoute');
 const userRoute = require('./routes/userRoute');
-const AppError = require('./utlis/appError');
+const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
 const viewRouter = require('./routes/viewRoute');
 

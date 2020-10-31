@@ -3,6 +3,7 @@ extends tab-base
 block content
     .main__container
         .app__home
+            +searchForm()
             each val, index in doctorData
                 +peopleCard(doctorData[index])
             

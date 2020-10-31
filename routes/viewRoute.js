@@ -3,7 +3,7 @@ const viewController = require('../controller/viewController');
 const router = express.Router();
 
 router.route('/').get(viewController.getHomePage);
-
+router.route('/hospital/:hospitalName').get(viewController.getHospital);
 router.route('/test').get(viewController.test);
 
 router.get('/login', (req, res) => {
