@@ -70,5 +70,3 @@ exports.getAllDoctors = factory.getAll(Doctor);
 // Do NOT update passwords with this!
 exports.updateDoctor = factory.updateOne(Doctor);
 exports.deleteDoctor = factory.deleteOne(Doctor);
-
-
