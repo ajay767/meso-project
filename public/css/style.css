@@ -1282,17 +1282,17 @@ p {
   font-weight: 400; }
   @media only screen and (max-width: 37.5em) {
     .card__heading {
-      font-size: 1.6rem; } }
+      font-size: 1.7rem; } }
 
 .card__caption {
   font-size: 1.7rem;
   font-weight: 400; }
   @media only screen and (max-width: 37.5em) {
     .card__caption {
-      font-size: 1.4rem; } }
+      font-size: 1.5rem; } }
 
 .card__paragraph {
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
 
 .feature__heading {
   font-size: 2rem; }
