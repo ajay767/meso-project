@@ -94,7 +94,7 @@ footer {
     height: 4rem;
     margin: 0rem auto;
     width: 56rem;
-    box-shadow: 0px 2px 2px 0px #000000ad;
+    box-shadow: 0px 0px 3px 2px #00000040;
     background-color: #fff;
     border-radius: 2px;
     overflow: hidden;
@@ -984,7 +984,7 @@ footer {
   top: 0;
   right: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: max-content;
   background-color: #396afc;
   padding: 1rem; }
   .page__header--icon-box {
@@ -1282,17 +1282,17 @@ p {
   font-weight: 400; }
   @media only screen and (max-width: 37.5em) {
     .card__heading {
-      font-size: 1.7rem; } }
+      font-size: 1.6rem; } }
 
 .card__caption {
   font-size: 1.7rem;
   font-weight: 400; }
   @media only screen and (max-width: 37.5em) {
     .card__caption {
-      font-size: 1.5rem; } }
+      font-size: 1.4rem; } }
 
 .card__paragraph {
-  font-size: 1.5rem; }
+  font-size: 1.3rem; }
 
 .feature__heading {
   font-size: 2rem; }
