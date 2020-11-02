@@ -16,7 +16,6 @@ app.use(express.json());
 app.use(express.static(`${__dirname}./../public`));
 app.use('*/css', express.static('public/css'));
 app.use('*/src', express.static('public/src'));
-
 app.set('view engine', 'pug');
 app.use(morgan('dev'));
 
