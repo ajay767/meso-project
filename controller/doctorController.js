@@ -1,4 +1,4 @@
-const Doctor = require('./../models/doctorModel');
+const Doctor = require('./../models/doctorVerifiedModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const factory = require('./handleFactory');
