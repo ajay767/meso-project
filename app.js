@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const pug = require('pug');
 
-const employeeRoute = require('./routes/employeeRoute');
+const doctorRoute = require('./routes/doctorRoute');
 const userRoute = require('./routes/userRoute');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 
 app.use('/', viewRouter);
 app.use('/api/v1/users', userRoute);
-app.use('/api/v1/employee', employeeRoute);
+app.use('/api/v1/doctor', doctorRoute);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
