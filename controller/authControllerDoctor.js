@@ -2,6 +2,8 @@ const crypto = require('crypto');
 const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const Doctor = require('./../models/doctorModel');
+const DoctorVerified = require('./../models/doctorVerifiedModel');
+
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const sendEmail = require('./../utils/email');
@@ -55,7 +57,7 @@ exports.login = catchAsync(async (req, res, next) => {
     return next(new AppError('Please provide email and password!', 400));
   }
   // 2) Check if doctor exists && password is correct
-  const doctor = await Doctor.findOne({ email }).select('+password');
+  const doctor = await DoctorVerified.findOne({ email }).select('+password');
 
   if (!doctor || !(await doctor.correctPassword(password, doctor.password))) {
     return next(new AppError('Incorrect email or password', 401));
@@ -95,8 +97,8 @@ exports.protect = catchAsync(async (req, res, next) => {
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
   // 3) Check if user still exists
-  const currentUser = await Doctor.findById(decoded.id);
-  if (!currentUser) {
+  const currentDoctor = await DoctorVerified.findById(decoded.id);
+  if (!currentDoctor) {
     return next(
       new AppError(
         'The user belonging to this token does no longer exist.',
@@ -106,15 +108,15 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   // 4) Check if user changed password after the token was issued
-  if (currentUser.changedPasswordAfter(decoded.iat)) {
+  if (currentDoctor.changedPasswordAfter(decoded.iat)) {
     return next(
       new AppError('User recently changed password! Please log in again.', 401)
     );
   }
 
   // GRANT ACCESS TO PROTECTED ROUTE
-  req.user = currentUser;
-  res.locals.user = currentUser;
+  req.user = currentDoctor;
+  res.locals.user = currentDoctor;
   next();
 });
 
@@ -129,7 +131,7 @@ exports.isLoggedIn = async (req, res, next) => {
       );
 
       // 2) Check if user still exists
-      const currentUser = await Doctor.findById(decoded.id);
+      const currentUser = await DoctorVerified.findById(decoded.id);
       if (!currentUser) {
         return next();
       }
@@ -151,7 +153,7 @@ exports.isLoggedIn = async (req, res, next) => {
 
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {
-    // roles ['admin', 'lead-guide']. role='user'
+    // roles ['admin', 'user']. role='user'
     if (!roles.includes(req.user.role)) {
       return next(
         new AppError('You do not have permission to perform this action', 403)
@@ -164,14 +166,14 @@ exports.restrictTo = (...roles) => {
 
 exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 1) Get user based on POSTed email
-  const user = await Doctor.findOne({ email: req.body.email });
-  if (!user) {
+  const doctor = await DoctorVerified.findOne({ email: req.body.email });
+  if (!doctor) {
     return next(new AppError('There is no user with email address.', 404));
   }
 
   // 2) Generate the random reset token
-  const resetToken = user.createPasswordResetToken();
-  await user.save({ validateBeforeSave: false });
+  const resetToken = doctor.createPasswordResetToken();
+  await doctor.save({ validateBeforeSave: false });
 
   // 3) Send it to user's email
   const resetURL = `${req.protocol}://${req.get(
@@ -182,7 +184,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   try {
     await sendEmail({
-      email: user.email,
+      email: doctor.email,
       subject: 'Your password reset token (valid for 10 min)',
       message
     });
@@ -192,9 +194,9 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
       message: 'Token sent to email!'
     });
   } catch (err) {
-    user.passwordResetToken = undefined;
-    user.passwordResetExpires = undefined;
-    await user.save({ validateBeforeSave: false });
+    doctor.passwordResetToken = undefined;
+    doctor.passwordResetExpires = undefined;
+    await doctor.save({ validateBeforeSave: false });
 
     return next(
       new AppError('There was an error sending the email. Try again later!'),
@@ -210,29 +212,31 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     .update(req.params.token)
     .digest('hex');
 
-  const user = await Doctor.findOne({
+  const doctor = await DoctorVerified.findOne({
     passwordResetToken: hashedToken,
     passwordResetExpires: { $gt: Date.now() }
   });
 
   // 2) If token has not expired, and there is user, set the new password
-  if (!user) {
+  if (!doctor) {
     return next(new AppError('Token is invalid or has expired', 400));
   }
-  user.password = req.body.password;
-  user.passwordConfirm = req.body.passwordConfirm;
-  user.passwordResetToken = undefined;
-  user.passwordResetExpires = undefined;
-  await user.save();
+  doctor.password = req.body.password;
+  doctor.passwordConfirm = req.body.passwordConfirm;
+  doctor.passwordResetToken = undefined;
+  doctor.passwordResetExpires = undefined;
+  await doctor.save();
 
   // 3) Update changedPasswordAt property for the user
   // 4) Log the user in, send JWT
-  createSendToken(user, 200, res);
+  createSendToken(doctor, 200, res);
 });
 
 exports.updatePassword = catchAsync(async (req, res, next) => {
   // 1) Get user from collection
-  const doctor = await Doctor.findById(req.doctor.id).select('+password');
+  const doctor = await DoctorVerified.findById(req.doctor.id).select(
+    '+password'
+  );
 
   // 2) Check if POSTed current password is correct
   if (
